@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HCI WAR — HCI.AI.KR</title><style>
+:root{
+  --bg:#07090b; --panel:#101318; --panel2:#0c0f13; --line:#27303a;
+  --text:#f4f7fa; --muted:#8e9aaa; --lime:#c7ff2e; --blue:#63a7ff;
+  --cyan:#52d7d0; --orange:#ffb35c; --purple:#b58cff; --red:#ff6e7a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, Pretendard, "Noto Sans KR", Arial,sans-serif;line-height:1.65}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding:0 34px}
+header{padding:30px 0 70px;border-bottom:1px solid #14191f}
+.crumb{color:var(--lime);font-size:13px;font-weight:800;letter-spacing:2px}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:20px 0 18px;letter-spacing:-3px}
+.lead{max-width:760px;color:#aab4c1;font-size:18px}
+.meta{margin-top:25px;color:#718096;font-size:13px}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px}
+nav a{color:#9aa6b5;text-decoration:none;border:1px solid #202730;padding:8px 13px;border-radius:999px;font-size:12px}
+nav a:hover{border-color:#53616f;color:#fff}
+section{padding:70px 0;border-bottom:1px solid #151a20}
+.eyebrow{color:var(--lime);font-size:12px;font-weight:800;letter-spacing:1.8px}
+h2{font-size:34px;letter-spacing:-1.2px;margin:9px 0 12px}
+h3{font-size:21px;margin:0 0 8px}
+p{margin:8px 0;color:#a9b3bf}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:linear-gradient(180deg,#11151a,#0d1014);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card small{display:block;color:#6f7b89;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:10px}
+.tag{display:inline-block;border:1px solid #303a45;border-radius:999px;padding:4px 9px;color:#aeb9c6;font-size:11px;margin:3px 4px 0 0}
+.num{font-size:38px;font-weight:900;color:#25303b;line-height:1}
+.note{border-left:3px solid var(--lime);padding:14px 18px;background:#0d1210;color:#b8c1cb;border-radius:0 12px 12px 0}
+.diagram{border:1px solid var(--line);border-radius:20px;background:#0b0e12;padding:22px;overflow:auto}
+.layer{border:1px solid #35404c;background:#11161c;border-radius:13px;padding:16px;text-align:center;margin:10px auto;max-width:780px}
+.layer strong{display:block;font-size:16px}
+.layer span{color:#7f8b99;font-size:12px}
+.arrow{text-align:center;color:#53606d;font-size:24px;line-height:1}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.node{border:1px solid #35404c;border-radius:12px;padding:16px;background:#11161c;text-align:center}
+.node b{display:block}
+.node em{display:block;font-style:normal;color:#7f8b99;font-size:11px;margin-top:4px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.step{border-top:2px solid #39444f;padding:17px 4px 0}
+.step b{display:block;color:#dce3ea}
+.step p{font-size:13px}
+table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:16px}
+th,td{padding:16px 15px;border-bottom:1px solid #20262d;text-align:left;vertical-align:top}
+th{background:#12171d;color:#dbe3eb;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+td{color:#aab4c0;font-size:14px}
+tr:last-child td{border-bottom:0}
+.hl{color:#fff;font-weight:700}
+.vendor{position:relative}
+.vendor .accent{height:3px;border-radius:4px;background:var(--lime);margin-bottom:20px}
+.vendor.vm .accent{background:var(--blue)}
+.vendor.vx .accent{background:var(--cyan)}
+.vendor.nu .accent{background:var(--orange)}
+.quote{font-size:22px;color:#e7edf3;line-height:1.45;margin:18px 0}
+footer{padding:42px 0 60px;color:#5f6a77;font-size:12px}
+.source-list a{color:#8798aa;text-decoration:none}
+.source-list a:hover{color:#fff}
+@media(max-width:850px){.g3,.g2,.timeline,.cols{grid-template-columns:1fr}.wrap{padding:0 20px}header{padding-bottom:45px}section{padding:48px 0}h1{letter-spacing:-2px}}
+</style></head>
+<body>
+<div class="wrap">
+<header>
+  <div class="crumb">01 / HCI · 03 / HCI WAR</div>
+  <h1>HCI WAR</h1>
+  <p class="lead">누가 더 좋은가를 먼저 묻지 않습니다. 같은 기준으로 놓고 보면 무엇이 다르고, 그 차이가 어떤 환경에서 의미를 갖는지 기술과 도입 관점에서 분석합니다.</p>
+  <div class="meta">Technology · Architecture · Licensing · Migration · Operations</div>
+  <nav>
+    <a href="https://hci.ai.kr">HCI.AI.KR</a><a href="hci-basics.html">HCI Basics</a><a href="hci-platforms.html">Platforms</a><a href="#framework">Comparison Framework</a><a href="#matrix">Matrix</a>
+  </nav>
+</header>
+
+<section id="framework">
+  <div class="eyebrow">01 / HOW TO COMPARE</div><h2>HCI WAR의 비교 원칙</h2>
+  <p>HCI 제품 비교는 스펙 숫자만 나열하면 실제 의사결정에 도움이 되지 않습니다. 동일한 workload, 동일한 기간, 동일한 서비스 수준을 가정하고 <b class="hl">아키텍처와 운영 방식의 차이</b>를 먼저 확인해야 합니다.</p>
+  <div class="grid g3" style="margin-top:24px">
+    <div class="card"><div class="num">01</div><h3>Architecture</h3><p>Compute·Storage·Network·Virtualization이 어디까지 통합되어 있는가?</p></div>
+    <div class="card"><div class="num">02</div><h3>Economics</h3><p>초기 CAPEX뿐 아니라 라이선스·유지보수·확장 비용을 포함한 TCO는 어떻게 달라지는가?</p></div>
+    <div class="card"><div class="num">03</div><h3>Operations</h3><p>배포·업그레이드·장애·모니터링·마이그레이션을 실제 운영팀이 어떻게 수행하는가?</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">02 / BATTLEFIELD</div><h2>HCI를 가르는 8개의 질문</h2>
+  <div class="grid g2">
+    <div class="card"><small>01</small><h3>Virtualization</h3><p>어떤 하이퍼바이저를 지원하며, 가상화 계층과 스토리지 계층은 얼마나 긴밀하게 통합되는가?</p></div>
+    <div class="card"><small>02</small><h3>Distributed Storage</h3><p>데이터 복제·Erasure Coding·Cache·Data Locality·Snapshot 등 데이터 서비스는 어떻게 구현되는가?</p></div>
+    <div class="card"><small>03</small><h3>Scale-Out</h3><p>노드 추가 시 CPU, 메모리, 스토리지가 어떻게 증가하며 불균형 확장이 가능한가?</p></div>
+    <div class="card"><small>04</small><h3>Management</h3><p>하나의 콘솔에서 VM·스토리지·네트워크·하드웨어·라이프사이클을 얼마나 일관되게 관리하는가?</p></div>
+    <div class="card"><small>05</small><h3>Availability</h3><p>노드 장애·디스크 장애·네트워크 장애가 발생했을 때 데이터와 서비스가 어떻게 보호되는가?</p></div>
+    <div class="card"><small>06</small><h3>Migration</h3><p>기존 VMware 또는 다른 가상화 환경에서 이동할 때 변환 도구와 운영 리스크는 무엇인가?</p></div>
+    <div class="card"><small>07</small><h3>Networking & Security</h3><p>가상 네트워크, Microsegmentation, L4/L7, 방화벽 등 외부 네트워크·보안 인프라와 어떤 방식으로 연결되는가?</p></div>
+    <div class="card"><small>08</small><h3>AI Readiness</h3><p>GPU, NVMe, 고속 Ethernet, VM/Container, AI workload의 배치와 운영을 어떻게 지원하는가?</p></div>
+  </div>
+</section>
+
+<section id="matrix">
+  <div class="eyebrow">03 / COMPARISON MATRIX</div><h2>대표 플랫폼 비교 프레임</h2>
+  <p>아래 표는 특정 제품의 우열을 결정하는 점수표가 아니라, 실제 검토 시 확인해야 할 질문을 한 화면에 모은 기준표입니다.</p>
+  <table style="margin-top:24px">
+    <tr><th>항목</th><th>Nutanix</th><th>VMware VCF</th><th>Dell VxRail</th></tr>
+    <tr><td class="hl">Core Architecture</td><td>AOS + AHV 중심 HCI</td><td>vSphere + VCF SDDC</td><td>PowerEdge + VMware HCI stack</td></tr>
+    <tr><td class="hl">Storage Model</td><td>Distributed Storage Fabric</td><td>vSAN 기반</td><td>vSAN 기반</td></tr>
+    <tr><td class="hl">Management</td><td>Prism</td><td>VCF management / Operations</td><td>VxRail Manager + vCenter</td></tr>
+    <tr><td class="hl">Hypervisor</td><td>AHV, VMware ESXi 등</td><td>vSphere</td><td>ESXi</td></tr>
+    <tr><td class="hl">Hardware Model</td><td>다양한 인증 하드웨어 생태계</td><td>다양한 인증 하드웨어 / VCF Ready 구성</td><td>Dell PowerEdge 기반 통합 시스템</td></tr>
+    <tr><td class="hl">Lifecycle</td><td>통합 소프트웨어 운영 모델</td><td>VCF 통합 lifecycle</td><td>VxRail LCM + VMware lifecycle</td></tr>
+    <tr><td class="hl">Migration Question</td><td>VMware → AHV 전환 시 도구·검증 필요</td><td>기존 VMware 환경과의 연속성 고려</td><td>기존 VMware 운영 체계와 높은 연속성</td></tr>
+    <tr><td class="hl">Key Decision</td><td>플랫폼 통합성과 선택권</td><td>Private Cloud / VMware ecosystem</td><td>통합 appliance와 Dell 인프라 표준화</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">04 / HOW TO READ A TCO</div><h2>TCO는 "가격"이 아니라 운영의 총비용이다</h2>
+  <div class="timeline">
+    <div class="step"><b>Year 0</b><p>하드웨어 + 초기 라이선스 + 설치·구축</p></div>
+    <div class="step"><b>Year 1–2</b><p>유지보수 + 라이선스 + 운영 인력 + 장애 대응</p></div>
+    <div class="step"><b>Year 3–4</b><p>증설 + 갱신 + 성능·용량 확장 + Migration</p></div>
+    <div class="step"><b>Year 5</b><p>잔존가치 + 재계약 + 교체·전환 비용</p></div>
+  </div>
+  <div class="note" style="margin-top:22px">TCO 비교에서는 동일한 CPU Core, 동일한 메모리·스토리지 용량, 동일한 지원 수준, 동일한 기간을 맞추지 않으면 숫자의 의미가 달라집니다. HCI.AI.KR에서는 비교 조건을 먼저 공개한 뒤 계산 결과를 제시하는 방식을 기본으로 합니다.</div>
+</section>
+
+<section>
+  <div class="eyebrow">05 / REAL-WORLD SCENARIOS</div><h2>같은 플랫폼도 환경에 따라 답이 달라진다</h2>
+  <div class="grid g3">
+    <div class="card"><small>Scenario A</small><h3>VMware 중심 데이터센터</h3><p>기존 vSphere 운영체계, 인력, 도구, 백업·DR 생태계를 유지해야 한다면 "전환 비용" 자체가 중요한 비교 변수가 됩니다.</p></div>
+    <div class="card"><small>Scenario B</small><h3>신규 Private Cloud</h3><p>새로운 환경에서는 하이퍼바이저, 관리 콘솔, 네트워크·보안 통합, 자동화까지 전체 운영 모델을 처음부터 비교할 수 있습니다.</p></div>
+    <div class="card"><small>Scenario C</small><h3>AI Infrastructure</h3><p>GPU와 고속 네트워크, NVMe, 데이터 파이프라인, VM/Container 운영을 함께 고려해야 하므로 일반 VM 중심 HCI 비교와는 다른 기준이 필요합니다.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">06 / THE HCI.AI.KR QUESTION</div>
+  <h2>HCI WAR는 승자를 정하는 페이지가 아니다</h2>
+  <p class="quote">"어떤 제품이 더 좋은가?"보다<br><strong>"우리 환경에서 어떤 아키텍처가 어떤 비용과 운영 결과를 만드는가?"</strong>를 묻습니다.</p>
+  <p>앞으로 이 영역에서는 실제 제품 버전, 라이선스 조건, 하드웨어 구성, workload를 명확히 적고 비교합니다. 조건이 바뀌면 결과도 바뀔 수 있다는 점을 항상 함께 표시합니다.</p>
+</section>
+
+<section>
+  <div class="eyebrow">07 / NEXT BATTLES</div><h2>다음 HCI WAR</h2>
+  <div class="grid g3">
+    <div class="card"><small>WAR 01</small><h3>Nutanix vs VMware</h3><p>AHV/AOS와 VCF의 구조, 운영 모델, Migration 관점 비교</p></div>
+    <div class="card"><small>WAR 02</small><h3>VMware VCF vs VxRail</h3><p>소프트웨어 플랫폼과 통합 appliance의 차이</p></div>
+    <div class="card"><small>WAR 03</small><h3>HCI vs 3-Tier</h3><p>새로운 HCI와 기존 SAN 기반 인프라의 설계·운영 차이</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="eyebrow">HCI.AI.KR</div>
+  <p>Where HCI Meets AI · Technology, explained from the infrastructure up.</p>
+  <div class="source-list">
+    Sources: <a href="https://www.nutanix.com/tech-center/solutions-architecture">Nutanix Architecture</a> ·
+    <a href="https://knowledge.broadcom.com/external/article/401497">Broadcom VCF Components</a> ·
+    <a href="https://www.dell.com/support/manuals/en-us/vxrail-appliance-series/vxrail_architecture_guide/vxrail-overview">Dell VxRail Architecture</a>
+  </div>
+</footer>
+</div></body></html>

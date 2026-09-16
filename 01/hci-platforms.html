@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HCI Platforms — HCI.AI.KR</title><style>
+:root{
+  --bg:#07090b; --panel:#101318; --panel2:#0c0f13; --line:#27303a;
+  --text:#f4f7fa; --muted:#8e9aaa; --lime:#c7ff2e; --blue:#63a7ff;
+  --cyan:#52d7d0; --orange:#ffb35c; --purple:#b58cff; --red:#ff6e7a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, Pretendard, "Noto Sans KR", Arial,sans-serif;line-height:1.65}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding:0 34px}
+header{padding:30px 0 70px;border-bottom:1px solid #14191f}
+.crumb{color:var(--lime);font-size:13px;font-weight:800;letter-spacing:2px}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:20px 0 18px;letter-spacing:-3px}
+.lead{max-width:760px;color:#aab4c1;font-size:18px}
+.meta{margin-top:25px;color:#718096;font-size:13px}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px}
+nav a{color:#9aa6b5;text-decoration:none;border:1px solid #202730;padding:8px 13px;border-radius:999px;font-size:12px}
+nav a:hover{border-color:#53616f;color:#fff}
+section{padding:70px 0;border-bottom:1px solid #151a20}
+.eyebrow{color:var(--lime);font-size:12px;font-weight:800;letter-spacing:1.8px}
+h2{font-size:34px;letter-spacing:-1.2px;margin:9px 0 12px}
+h3{font-size:21px;margin:0 0 8px}
+p{margin:8px 0;color:#a9b3bf}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:linear-gradient(180deg,#11151a,#0d1014);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card small{display:block;color:#6f7b89;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:10px}
+.tag{display:inline-block;border:1px solid #303a45;border-radius:999px;padding:4px 9px;color:#aeb9c6;font-size:11px;margin:3px 4px 0 0}
+.num{font-size:38px;font-weight:900;color:#25303b;line-height:1}
+.note{border-left:3px solid var(--lime);padding:14px 18px;background:#0d1210;color:#b8c1cb;border-radius:0 12px 12px 0}
+.diagram{border:1px solid var(--line);border-radius:20px;background:#0b0e12;padding:22px;overflow:auto}
+.layer{border:1px solid #35404c;background:#11161c;border-radius:13px;padding:16px;text-align:center;margin:10px auto;max-width:780px}
+.layer strong{display:block;font-size:16px}
+.layer span{color:#7f8b99;font-size:12px}
+.arrow{text-align:center;color:#53606d;font-size:24px;line-height:1}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.node{border:1px solid #35404c;border-radius:12px;padding:16px;background:#11161c;text-align:center}
+.node b{display:block}
+.node em{display:block;font-style:normal;color:#7f8b99;font-size:11px;margin-top:4px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.step{border-top:2px solid #39444f;padding:17px 4px 0}
+.step b{display:block;color:#dce3ea}
+.step p{font-size:13px}
+table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:16px}
+th,td{padding:16px 15px;border-bottom:1px solid #20262d;text-align:left;vertical-align:top}
+th{background:#12171d;color:#dbe3eb;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+td{color:#aab4c0;font-size:14px}
+tr:last-child td{border-bottom:0}
+.hl{color:#fff;font-weight:700}
+.vendor{position:relative}
+.vendor .accent{height:3px;border-radius:4px;background:var(--lime);margin-bottom:20px}
+.vendor.vm .accent{background:var(--blue)}
+.vendor.vx .accent{background:var(--cyan)}
+.vendor.nu .accent{background:var(--orange)}
+.quote{font-size:22px;color:#e7edf3;line-height:1.45;margin:18px 0}
+footer{padding:42px 0 60px;color:#5f6a77;font-size:12px}
+.source-list a{color:#8798aa;text-decoration:none}
+.source-list a:hover{color:#fff}
+@media(max-width:850px){.g3,.g2,.timeline,.cols{grid-template-columns:1fr}.wrap{padding:0 20px}header{padding-bottom:45px}section{padding:48px 0}h1{letter-spacing:-2px}}
+</style></head>
+<body>
+<div class="wrap">
+<header>
+  <div class="crumb">01 / HCI · 02 / PLATFORMS</div>
+  <h1>HCI Platforms</h1>
+  <p class="lead">HCI는 하나의 제품이 아니라, 서로 다른 철학과 아키텍처를 가진 플랫폼들의 집합입니다. 주요 플랫폼이 무엇을 통합하고 어떻게 운영하는지 구조부터 살펴봅니다.</p>
+  <div class="meta">Technology · Platform · Architecture · 2026</div>
+  <nav>
+    <a href="https://hci.ai.kr">HCI.AI.KR</a><a href="hci-basics.html">HCI Basics</a><a href="#nutanix">Nutanix</a><a href="#vmware">VMware VCF</a><a href="#vxrail">Dell VxRail</a><a href="hci-war.html">HCI WAR →</a>
+  </nav>
+</header>
+
+<section>
+  <div class="eyebrow">01 / FIRST PRINCIPLE</div><h2>HCI 플랫폼을 볼 때 무엇을 봐야 하는가?</h2>
+  <p>HCI를 단순히 "서버 + 스토리지 + 가상화"로 보면 플랫폼 간 차이가 잘 보이지 않습니다. 실제 차이는 <b class="hl">어떤 계층을 소프트웨어로 통합하고, 어디에서 관리하며, 어떻게 확장하고, 장애를 어떻게 처리하는가</b>에 있습니다.</p>
+  <div class="grid g3" style="margin-top:24px">
+    <div class="card"><small>01 · Architecture</small><h3>통합 범위</h3><p>Compute, Storage, Virtualization, Network, Security, Management 가운데 어느 영역까지 하나의 운영 모델로 묶는지 봅니다.</p></div>
+    <div class="card"><small>02 · Scale</small><h3>확장 방식</h3><p>노드를 추가해 성능과 용량을 함께 늘리는지, 컴퓨트와 스토리지를 분리해 확장할 수 있는지 확인합니다.</p></div>
+    <div class="card"><small>03 · Operations</small><h3>운영 모델</h3><p>배포, 모니터링, 장애 대응, 업그레이드, 정책 적용을 얼마나 일관된 관리 체계로 제공하는지 살펴봅니다.</p></div>
+  </div>
+</section>
+
+<section id="nutanix">
+  <div class="eyebrow">02 / PLATFORM 01</div><h2>Nutanix</h2>
+  <div class="grid g2">
+    <div class="card vendor nu"><div class="accent"></div><small>Nutanix Cloud Infrastructure</small>
+      <h3>AOS + AHV 중심의 HCI</h3>
+      <p>Nutanix AOS는 클러스터의 로컬 스토리지를 분산형 스토리지 패브릭으로 묶고, AHV는 VM을 실행하는 통합 하이퍼바이저 역할을 합니다.</p>
+      <p><span class="tag">AOS</span><span class="tag">AHV</span><span class="tag">Prism</span><span class="tag">Distributed Storage</span></p>
+    </div>
+    <div class="card"><small>Architecture</small>
+      <div class="layer"><strong>Prism</strong><span>Management · Monitoring · Policy</span></div>
+      <div class="arrow">↓</div>
+      <div class="layer"><strong>AOS / Distributed Storage Fabric</strong><span>Storage Services · Data Protection · Data Locality</span></div>
+      <div class="arrow">↓</div>
+      <div class="layer"><strong>AHV / Hypervisor</strong><span>Virtual Machines · Compute</span></div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:18px">핵심 관찰점: Nutanix는 스토리지와 가상화, 관리 계층을 긴밀하게 통합하는 구조를 오래 유지해 왔습니다. AOS는 분산 스토리지 기반을 제공하고 AHV는 VM 실행 계층을 담당합니다. citeturn0search46turn0search8</div>
+</section>
+
+<section id="vmware">
+  <div class="eyebrow">03 / PLATFORM 02</div><h2>VMware Cloud Foundation</h2>
+  <div class="grid g2">
+    <div class="card vendor vm"><div class="accent"></div><small>Broadcom · VMware Cloud Foundation</small>
+      <h3>Private Cloud / SDDC 플랫폼</h3>
+      <p>현재 VCF는 vSphere를 기반으로 네트워크, 스토리지, 운영·자동화 계층을 통합하는 소프트웨어 정의 데이터센터 플랫폼으로 발전하고 있습니다.</p>
+      <p><span class="tag">vSphere</span><span class="tag">vSAN</span><span class="tag">NSX</span><span class="tag">VCF Operations</span><span class="tag">Automation</span></p>
+    </div>
+    <div class="card"><small>Conceptual Architecture</small>
+      <div class="layer"><strong>Cloud / Self-Service</strong><span>Automation · Application Consumption</span></div>
+      <div class="arrow">↓</div>
+      <div class="layer"><strong>VCF Operations & Management</strong><span>Operations · Lifecycle · Fleet</span></div>
+      <div class="arrow">↓</div>
+      <div class="layer"><strong>vSphere + vSAN + NSX</strong><span>Compute · Storage · Networking</span></div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:18px">2026년 현재 VCF 9.x 계열에서는 vSphere, NSX, vSAN, VCF Operations, Automation 등 여러 구성요소가 하나의 VCF 플랫폼으로 관리되는 방향입니다. Broadcom의 현재 문서에는 VCF 9.1.1 릴리스가 2026년 9월 3일자로 기록되어 있습니다. citeturn1search2turn1search14</div>
+</section>
+
+<section id="vxrail">
+  <div class="eyebrow">04 / PLATFORM 03</div><h2>Dell VxRail</h2>
+  <div class="grid g2">
+    <div class="card vendor vx"><div class="accent"></div><small>Dell Technologies · VMware</small>
+      <h3>Integrated HCI Appliance</h3>
+      <p>VxRail은 Dell PowerEdge 기반 하드웨어와 VMware 소프트웨어를 통합한 HCI 시스템으로, VxRail Manager와 vCenter를 통해 배포와 운영을 단순화하는 모델입니다.</p>
+      <p><span class="tag">PowerEdge</span><span class="tag">ESXi</span><span class="tag">vSAN</span><span class="tag">vCenter</span><span class="tag">VxRail Manager</span></p>
+    </div>
+    <div class="card"><small>Integrated Stack</small>
+      <div class="layer"><strong>Operations</strong><span>VxRail Manager · vCenter</span></div>
+      <div class="arrow">↓</div>
+      <div class="layer"><strong>VMware Software Stack</strong><span>ESXi · vSAN</span></div>
+      <div class="arrow">↓</div>
+      <div class="layer"><strong>Dell PowerEdge Nodes</strong><span>Compute · Memory · Local Storage · Network</span></div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:18px">VxRail의 기본 물리 구조는 Ethernet으로 연결된 여러 노드로 구성되며, 소프트웨어 번들에는 ESXi, VxRail Manager, vCenter Server, vSAN이 포함됩니다. citeturn0search1</div>
+</section>
+
+<section>
+  <div class="eyebrow">05 / PLATFORM MAP</div><h2>같은 HCI, 다른 설계 철학</h2>
+  <table>
+    <tr><th>관점</th><th>Nutanix</th><th>VMware VCF</th><th>Dell VxRail</th></tr>
+    <tr><td>핵심 구조</td><td>AOS + AHV 중심의 통합 HCI</td><td>vSphere 기반 SDDC / Private Cloud</td><td>Dell 하드웨어 + VMware 소프트웨어 통합 어플라이언스</td></tr>
+    <tr><td>스토리지</td><td>분산형 소프트웨어 정의 스토리지</td><td>vSAN 중심의 소프트웨어 정의 스토리지</td><td>vSAN 기반</td></tr>
+    <tr><td>가상화</td><td>AHV / VMware ESXi 등 지원</td><td>vSphere</td><td>ESXi</td></tr>
+    <tr><td>관리</td><td>Prism</td><td>VCF Operations / VCF 관리 구성요소</td><td>VxRail Manager + vCenter</td></tr>
+    <tr><td>핵심 관점</td><td>HCI 플랫폼의 통합 운영</td><td>Private Cloud / SDDC 운영 모델</td><td>검증된 통합 하드웨어·소프트웨어 스택</td></tr>
+  </table>
+  <p style="margin-top:16px;font-size:12px;color:#687584">※ 위 표는 기능 우열을 평가하는 순위표가 아니라 각 플랫폼의 대표적인 구조와 운영 모델을 이해하기 위한 요약입니다.</p>
+</section>
+
+<section>
+  <div class="eyebrow">06 / NEXT</div><h2>다음 질문은 "그래서 무엇이 다른가?"</h2>
+  <p>플랫폼의 기본 구조를 이해했다면 다음에는 실제 도입 관점에서 비교해야 합니다. 라이선스, 하드웨어 종속성, Scale-Out, Migration, 장애 대응, 네트워크·보안, 관리 편의성, AI 인프라 지원까지 같은 기준으로 놓고 봐야 합니다.</p>
+  <div class="card" style="margin-top:20px"><h3>→ HCI WAR</h3><p>Nutanix · VMware · VxRail · 기타 HCI를 동일한 질문으로 비교합니다. 숫자와 조건이 필요한 부분은 별도로 근거를 제시하고, 특정 제품의 우열을 전제로 하지 않습니다.</p><a href="hci-war.html" style="color:var(--lime);text-decoration:none">HCI WAR 페이지 보기 →</a></div>
+</section>
+
+<footer>
+  <div class="eyebrow">HCI.AI.KR</div>
+  <p>Where HCI Meets AI · Technology, explained from the infrastructure up.</p>
+  <div class="source-list">
+    Sources: <a href="https://www.nutanix.com/tech-center/solutions-architecture">Nutanix Architecture</a> ·
+    <a href="https://www.nutanix.com/content/dam/nutanix/documents/certifications/advanced-admin-aos.pdf">Nutanix AOS Architecture</a> ·
+    <a href="https://knowledge.broadcom.com/external/article/401497">Broadcom VCF Components</a> ·
+    <a href="https://www.dell.com/support/manuals/en-us/vxrail-appliance-series/vxrail_architecture_guide/vxrail-overview">Dell VxRail Architecture</a>
+  </div>
+</footer>
+</div></body></html>
