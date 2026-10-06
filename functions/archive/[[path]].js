@@ -30,15 +30,29 @@ function realPage() {
 }
 
 export async function onRequest(context) {
-  const { request, env, params } = context;
-  const raw = Array.isArray(params.path) ? params.path : [params.path];
-  const pathName = raw.filter(Boolean).join("/");
-  if (pathName.includes("/")) return new Response("Not Found", { status: 404 });
+  const { request, env } = context;
+
+  const url = new URL(request.url);
+  const parts = url.pathname.split("/").filter(Boolean);
+
+  if (parts.length !== 2 || parts[0] !== "archive") {
+    return new Response("Not Found", { status: 404 });
+  }
+
+  let pathName = "";
+
+  try {
+    pathName = decodeURIComponent(parts[1]);
+  } catch {
+    return new Response("Not Found", { status: 404 });
+  }
 
   let kind = null;
   if (FAKE_PATHS.has(pathName)) kind = "fake";
   else if (pathName === REAL_PATH) kind = "real";
   else return new Response("Not Found", { status: 404 });
+
+  // 여기부터 기존 코드 그대로
 
   const password = kind === "real"
     ? (env.LHJ_CHOCODONGLE_PASSWORD || "750503&20240626!")
