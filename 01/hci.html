@@ -14,6 +14,14 @@ a{color:inherit;text-decoration:none}.site-header{width:min(var(--max),calc(100%
 .principles{margin-top:18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.principle{padding:20px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.025)}.principle strong{display:block;font-size:16px;margin-bottom:5px}.principle span{color:#9eacc9;font-size:13px}.bottom{margin-top:80px;padding-top:30px;display:flex;justify-content:space-between;color:#7f8eae;font-size:12px}.back{color:#c9d3e9}
 @media(max-width:760px){.site-header,.page{width:min(100% - 36px,var(--max))}.site-header{height:76px}.nav{gap:15px;font-size:12px}.page{padding-top:55px}.lead{font-size:18px}.cards{grid-template-columns:1fr}.principles{grid-template-columns:1fr 1fr}.bottom{flex-direction:column;align-items:flex-start;gap:14px}}
 @media(max-width:480px){.site-header{padding-top:25px;height:auto;align-items:flex-start}.nav{display:none}h1{font-size:52px}.principles{grid-template-columns:1fr}}
+
+.glossary-box{margin-top:24px;padding:28px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.035)}
+.glossary-intro{margin:0 0 20px;color:var(--muted);font-size:15px}
+.terms{display:flex;flex-wrap:wrap;gap:9px}
+.term{display:inline-flex;align-items:center;padding:9px 14px;border:1px solid rgba(128,102,255,.35);border-radius:999px;background:rgba(128,102,255,.08);color:#dce2f5;font-size:13px;transition:.2s}
+.term:hover{border-color:var(--hci);background:rgba(128,102,255,.16);color:#fff}
+.glossary-link{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:20px;padding:15px 17px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.035);font-size:14px;font-weight:700}
+.glossary-link span:last-child{color:var(--ai)}
 </style>
 </head>
 <body>
@@ -42,7 +50,7 @@ a{color:inherit;text-decoration:none}.site-header{width:min(var(--max),calc(100%
 <section class="section">
 <div class="section-label">CORE CONCEPTS</div>
 <h2 class="section-title">HCI의 핵심 구조</h2>
-<p class="section-copy">HCI를 구성하는 대표적인 아키텍처 특성을 한눈에 확인합니다.</p>
+<p class="section-copy">HCI를 이해하기 위한 네 가지 핵심 개념입니다.</p>
 <div class="principles">
 <div class="principle"><strong>Converged</strong><span>Compute + Storage + Network</span></div>
 <div class="principle"><strong>Software-Defined</strong><span>Hardware abstraction &amp; automation</span></div>
@@ -50,6 +58,33 @@ a{color:inherit;text-decoration:none}.site-header{width:min(var(--max),calc(100%
 <div class="principle"><strong>Scale-Out</strong><span>노드 기반 확장과 유연한 성장</span></div>
 </div>
 </section>
+
+<section class="section" id="glossary">
+<div class="section-label">TECHNOLOGY GLOSSARY</div>
+<h2 class="section-title">HCI 주요 용어</h2>
+<p class="section-copy">이 페이지에서 사용되는 주요 기술 용어를 용어집에서 자세히 확인할 수 있습니다.</p>
+<div class="glossary-box">
+<p class="glossary-intro">용어를 클릭하면 HCI.AI.KR의 Technology Glossary로 이동합니다.</p>
+<div class="terms">
+<a class="term" href="../05/glossary.html">HCI</a>
+<a class="term" href="../05/glossary.html">Hyper-Converged Infrastructure</a>
+<a class="term" href="../05/glossary.html">Compute</a>
+<a class="term" href="../05/glossary.html">Storage</a>
+<a class="term" href="../05/glossary.html">Network</a>
+<a class="term" href="../05/glossary.html">Software-Defined</a>
+<a class="term" href="../05/glossary.html">Distributed</a>
+<a class="term" href="../05/glossary.html">Scale-Out</a>
+<a class="term" href="../05/glossary.html">Virtualization</a>
+<a class="term" href="../05/glossary.html">Hypervisor</a>
+<a class="term" href="../05/glossary.html">3-Tier Infrastructure</a>
+<a class="term" href="../05/glossary.html">SDS</a>
+<a class="term" href="../05/glossary.html">SDN</a>
+<a class="term" href="../05/glossary.html">TCO</a>
+</div>
+<a class="glossary-link" href="../05/glossary.html"><span>Technology Glossary에서 전체 용어 보기</span><span>→</span></a>
+</div>
+</section>
+
 <div class="bottom"><a class="back" href="../main.html">← Back to HCI.AI.KR</a><span>© 2026 HCI.AI.KR. All rights reserved.</span></div>
 </main>
 </body>
