@@ -1,3 +1,56 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HCI | HCI.AI.KR</title><link rel="stylesheet" href="/style.css"></head><body><header><div class="wrap nav"><a class="logo" href="/index.html"><span class="hci">HCI</span><span class="ai">.AI</span><span class="kr">.KR</span></a><nav>
-<a href="/01/hci.html">HCI</a><a href="/02/ai.html">AI</a><a href="/03/hci-ai.html">HCI × AI</a><a href="/04/insight.html">INSIGHT</a><a href="/05/about.html">ABOUT</a>
-</nav></div></header><main><section class="hero"><div class="wrap"><div class="hero-copy"><div class="eyebrow">01 / HCI</div><h1><span class='hci'>Hyper-Converged</span><br>Infrastructure</h1><p class="lead">HCI의 개념부터 플랫폼, 운영, 비교, 도입 전략까지 단계적으로 정리합니다.</p></div></div></section><div class="grid"><article class="card"><div class="num">01</div><h3>HCI Basics</h3><p>HCI의 정의, 구성요소, 구조와 운영 모델</p></article><article class="card"><div class="num">02</div><h3>Platforms</h3><p>주요 HCI 플랫폼의 구조와 특징</p></article><article class="card"><div class="num">03</div><h3>Comparison</h3><p>비교 기준, TCO, 운영 모델과 도입 시나리오</p></article><article class="card"><div class="num">04</div><h3>POPCON HCI</h3><p>국내 HCI 플랫폼의 구성과 검토 항목</p></article></div></main><footer><div class="wrap"><div class="footerline"><span>HCI.AI.KR · Infrastructure & Intelligence</span><span>HCI · AI · Architecture · Insight</span></div><div class="copyright">© 2026 HCI.AI.KR. All rights reserved.</div></div></footer></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="HCI.AI.KR - Hyper-Converged Infrastructure">
+<title>01 · HCI | HCI.AI.KR</title>
+<style>
+:root{--top:#142c5a;--mid:#0b1d43;--bottom:#040d22;--border:rgba(180,198,235,.20);--text:#f5f7ff;--muted:#b7c3df;--hci:#8066ff;--ai:#b7ff00;--gold:#f2b85b;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.65;background:linear-gradient(180deg,var(--top),var(--mid) 48%,var(--bottom))}
+a{color:inherit;text-decoration:none}.site-header{width:min(var(--max),calc(100% - 64px));margin:auto;height:92px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:18px;font-weight:800}.brand .ai{color:var(--ai)}.nav{display:flex;gap:30px;font-size:14px;color:#dce4f7}.nav a:hover{color:#fff}
+.page{width:min(var(--max),calc(100% - 64px));margin:auto;padding:74px 0 100px}.eyebrow,.section-label{font-size:12px;font-weight:800;letter-spacing:.2em}.eyebrow{color:var(--hci);font-size:13px;margin-bottom:22px}h1{margin:0;font-size:clamp(54px,8vw,92px);line-height:.98;letter-spacing:-.045em}.lead{max-width:820px;margin:30px 0 0;color:#d6def1;font-size:21px;line-height:1.8}.hero-meta{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}.pill{padding:7px 14px;border:1px solid var(--border);border-radius:999px;color:#cbd6ee;background:rgba(255,255,255,.035);font-size:13px}
+.section{margin-top:92px}.section-label{color:var(--ai);margin-bottom:10px}.section-title{margin:0;font-size:32px;letter-spacing:-.025em}.section-copy{margin:10px 0 0;color:var(--muted);font-size:16px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}.card{min-height:245px;padding:30px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(145deg,rgba(30,55,94,.78),rgba(12,30,61,.78));transition:.2s}.card:hover{transform:translateY(-3px);border-color:rgba(128,102,255,.55)}.card-number{color:#cbd5ec;font-family:Georgia,serif;font-size:15px;margin-bottom:24px}.card h2{margin:0;font-size:27px;color:var(--hci)}.card:nth-child(4) h2{color:var(--gold)}.card p{margin:14px 0 0;color:#c1cde5;font-size:15px;line-height:1.7}.arrow{display:inline-block;margin-top:25px;color:var(--ai);font-size:13px;font-weight:800}
+.principles{margin-top:18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.principle{padding:20px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.025)}.principle strong{display:block;font-size:16px;margin-bottom:5px}.principle span{color:#9eacc9;font-size:13px}.bottom{margin-top:80px;padding-top:30px;display:flex;justify-content:space-between;color:#7f8eae;font-size:12px}.back{color:#c9d3e9}
+@media(max-width:760px){.site-header,.page{width:min(100% - 36px,var(--max))}.site-header{height:76px}.nav{gap:15px;font-size:12px}.page{padding-top:55px}.lead{font-size:18px}.cards{grid-template-columns:1fr}.principles{grid-template-columns:1fr 1fr}.bottom{flex-direction:column;align-items:flex-start;gap:14px}}
+@media(max-width:480px){.site-header{padding-top:25px;height:auto;align-items:flex-start}.nav{display:none}h1{font-size:52px}.principles{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../main.html">HCI.<span class="ai">AI.KR</span></a>
+<nav class="nav"><a href="hci.html">HCI</a><a href="../02/ai.html">AI</a><a href="../03/hci-ai.html">HCI × AI</a><a href="../04/insight.html">INSIGHT</a></nav>
+</header>
+<main class="page">
+<section class="hero">
+<div class="eyebrow">01 · HCI</div>
+<h1>Hyper-Converged<br>Infrastructure</h1>
+<p class="lead">Compute, Storage, Network를 하나의 Software-Defined Infrastructure로 통합하고 분산·확장·자동화하는 현대적인 인프라 아키텍처</p>
+<div class="hero-meta"><span class="pill">Compute</span><span class="pill">Storage</span><span class="pill">Network</span><span class="pill">Software-Defined</span><span class="pill">Scale-Out</span></div>
+</section>
+<section class="section">
+<div class="section-label">EXPLORE HCI</div>
+<h2 class="section-title">HCI를 이해하는 네 가지 관점</h2>
+<p class="section-copy">개념에서 플랫폼, 비교와 시장의 변화까지 하나의 흐름으로 살펴봅니다.</p>
+<div class="cards">
+<a class="card" href="hci-basics.html"><div class="card-number">01</div><h2>HCI BASICS</h2><p>HCI의 핵심 개념과 구조, 주요 구성요소, Architecture와 기존 3-Tier Infrastructure와의 차이를 살펴봅니다.</p><span class="arrow">EXPLORE →</span></a>
+<a class="card" href="hci-platforms.html"><div class="card-number">02</div><h2>HCI PLATFORMS</h2><p>Nutanix · VMware · VxRail · POPCON · Others의 주요 특징과 아키텍처, 라이선스 및 운영 방식을 살펴봅니다.</p><span class="arrow">EXPLORE →</span></a>
+<a class="card" href="hci-war.html"><div class="card-number">03</div><h2>HCI COMPARISON</h2><p>Architecture · License · TCO · Operation 관점에서 주요 HCI 플랫폼을 비교하고 적용 환경을 살펴봅니다.</p><span class="arrow">COMPARE →</span></a>
+<a class="card" href="../04/hci-insight.html"><div class="card-number">04</div><h2>HCI INSIGHT</h2><p>HCI 시장의 변화와 기술 트렌드, Virtualization · Private Cloud · AI Infrastructure로 이어지는 흐름을 살펴봅니다.</p><span class="arrow">EXPLORE →</span></a>
+</div>
+</section>
+<section class="section">
+<div class="section-label">CORE CONCEPTS</div>
+<h2 class="section-title">HCI의 핵심 구조</h2>
+<p class="section-copy">HCI를 구성하는 대표적인 아키텍처 특성을 한눈에 확인합니다.</p>
+<div class="principles">
+<div class="principle"><strong>Converged</strong><span>Compute + Storage + Network</span></div>
+<div class="principle"><strong>Software-Defined</strong><span>Hardware abstraction &amp; automation</span></div>
+<div class="principle"><strong>Distributed</strong><span>분산 아키텍처와 데이터 서비스</span></div>
+<div class="principle"><strong>Scale-Out</strong><span>노드 기반 확장과 유연한 성장</span></div>
+</div>
+</section>
+<div class="bottom"><a class="back" href="../main.html">← Back to HCI.AI.KR</a><span>© 2026 HCI.AI.KR. All rights reserved.</span></div>
+</main>
+</body>
+</html>
