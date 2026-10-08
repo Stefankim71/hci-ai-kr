@@ -9,177 +9,129 @@
 :root{
   --top:#142c5a;--mid:#0b1d43;--bottom:#040d22;
   --border:rgba(180,198,235,.20);--text:#f5f7ff;--muted:#b7c3df;
-  --hci:#8066ff;--ai:#b7ff00;--gold:#f2b85b;
+  --hci:#8066ff;--ai:#b7ff00;--gold:#f2b85b;--blue:#63a7ff;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.65;background:linear-gradient(180deg,var(--top),var(--mid) 48%,var(--bottom))}
 a{color:inherit;text-decoration:none}
-.header{width:min(1100px,calc(100% - 64px));height:92px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.header{width:min(1160px,calc(100% - 64px));height:92px;margin:auto;display:flex;align-items:center;justify-content:space-between}
 .brand{font-size:18px;font-weight:800}.brand span{color:var(--ai)}
 .nav{display:flex;gap:30px;font-size:14px;color:#dce4f7}.nav a:hover{color:#fff}
-.page{width:min(1100px,calc(100% - 64px));margin:auto;padding:72px 0 100px}
-.eyebrow{color:var(--hci);font-size:13px;font-weight:800;letter-spacing:.2em;margin-bottom:20px}
+.page{width:min(1160px,calc(100% - 64px));margin:auto;padding:72px 0 100px}
+.eyebrow,.label{color:var(--ai);font-size:12px;font-weight:800;letter-spacing:.2em;margin-bottom:12px}
 h1{margin:0;font-size:clamp(52px,8vw,88px);line-height:1;letter-spacing:-.045em}
-.lead{max-width:850px;margin:28px 0 0;color:#d6def1;font-size:20px;line-height:1.8}
-.section{margin-top:92px}
-.label{color:var(--ai);font-size:12px;font-weight:800;letter-spacing:.2em;margin-bottom:10px}
 h2{margin:0;font-size:32px;letter-spacing:-.025em}
+h3{letter-spacing:-.02em}
+.lead{max-width:920px;margin:28px 0 0;color:#d6def1;font-size:20px;line-height:1.85}
+.section{margin-top:92px}
 .section-copy{margin:10px 0 0;color:var(--muted);font-size:16px}
 .intro{margin-top:30px;padding:30px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.035)}
 .intro p{margin:0;color:#d4ddef;font-size:17px;line-height:1.9}
-.concepts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
-.concept{padding:24px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(145deg,rgba(30,55,94,.75),rgba(12,30,61,.75))}
-.concept strong{display:block;color:var(--hci);font-size:18px;margin-bottom:7px}.concept span{color:#aebbd5;font-size:14px}
+.intro p + p{margin-top:14px}
+
+/* compact animated transition */
+.transition{margin-top:30px}
+.transition-viewer{position:relative;min-height:390px;padding:28px 72px 24px;border:1px solid var(--border);border-radius:20px;background:linear-gradient(145deg,rgba(25,53,95,.78),rgba(8,25,54,.86));overflow:hidden}
+.t-stage{display:none;animation:stageIn .35s ease}.t-stage.active{display:block}
+.t-stage-title{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.t-num{display:inline-flex;width:40px;height:29px;align-items:center;justify-content:center;border-radius:20px;background:#2469c7;font-size:13px;font-weight:800}
+.t-stage.final .t-num{background:var(--hci)}
+.t-stage-title h3{font-size:21px;margin:0}.t-stage-title span{color:#91a6c7;font-size:13px}
+.t-content{min-height:275px;display:flex;align-items:center;justify-content:center}
+.t-3tier{display:grid;grid-template-columns:1fr 105px 1fr;align-items:center;gap:28px;width:100%;max-width:900px}
+.t-layer-stack{display:flex;flex-direction:column;gap:11px}
+.t-layer-box{padding:16px;border:1px solid rgba(112,154,221,.5);border-radius:10px;background:rgba(29,84,155,.44);text-align:center}
+.t-layer-box b{display:block;font-size:17px}.t-layer-box span{display:block;color:#a6b9d7;font-size:12px;margin-top:3px}
+.t-big-arrow{color:#79adff;font-size:56px;text-align:center}
+.t-software{width:100%;max-width:900px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.t-module{padding:27px 12px;border:1px solid #5c82d8;border-radius:12px;background:linear-gradient(145deg,rgba(32,89,163,.58),rgba(70,66,165,.46));text-align:center}
+.t-module strong{display:block;font-size:18px}.t-module small{display:block;color:#a9bddd;font-size:12px;margin-top:5px}
+.t-software-label{grid-column:1/-1;padding:16px;border-radius:10px;text-align:center;background:linear-gradient(90deg,#173e80,#4c5fff,#6b55e8);font-size:15px;font-weight:800;box-shadow:0 0 22px rgba(77,156,255,.18)}
+.t-scale{display:flex;align-items:center;justify-content:center;gap:13px;width:100%}
+.t-node{width:92px;height:108px;border:2px solid #7897bf;border-radius:6px;background:linear-gradient(90deg,#1a345b,#41668f);position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:9px;font-size:11px;color:#c7d5e9}
+.t-node:before{content:"";position:absolute;left:12px;right:12px;top:14px;height:7px;background:#69b7ff;box-shadow:0 17px #69b7ff,0 34px #69b7ff}
+.t-node-add{width:92px;height:108px;border:2px dashed #6d87ae;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:42px;color:#6f9eff}
+.t-scale-caption{text-align:center;color:#a9c0ff;font-size:14px;font-weight:700;margin-top:18px}
+.t-compare{width:100%;display:grid;grid-template-columns:1fr 54px 1fr;gap:18px;align-items:center}
+.t-compare-side{padding:23px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.035)}
+.t-compare-side h4{margin:0 0 14px;font-size:18px}.t-compare-side ul{margin:0;padding-left:19px;color:#aebbd5;font-size:13px;line-height:1.85}
+.t-compare-side.hci{border-color:rgba(128,102,255,.65);background:rgba(128,102,255,.08)}.t-compare-side.hci h4{color:#c9bcff}
+.t-vs{text-align:center;color:var(--ai);font-size:15px;font-weight:800}
+.t-controls{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid rgba(128,166,225,.55);border-radius:50%;background:rgba(8,24,53,.9);color:#fff;font-size:30px;cursor:pointer;z-index:3}
+.t-controls:hover{border-color:#8066ff;background:rgba(128,102,255,.22)}.t-prev{left:16px}.t-next{right:16px}
+.t-dots{display:flex;justify-content:center;gap:8px;margin-top:14px}.t-dot{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:#4d6790;cursor:pointer}.t-dot.active{width:25px;border-radius:8px;background:var(--hci)}
+@keyframes stageIn{from{opacity:.35;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+
+/* core concepts */
+.concepts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.concept{min-height:390px;padding:25px 22px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(145deg,rgba(30,55,94,.78),rgba(12,30,61,.78))}
+.concept strong{display:block;color:var(--hci);font-size:20px;margin-bottom:12px}
+.concept .intro-label,.arch-item .intro-label{display:block;color:#b7c3df;font-size:12px;font-weight:800;letter-spacing:.08em;margin:17px 0 6px;padding-top:14px;border-top:1px solid rgba(180,198,235,.16)}
+.concept .summary{display:block;color:#aebbd5;font-size:14px;line-height:1.7}
+.concept .detail{display:block;color:#fff;font-size:13px;line-height:1.8}
+
+/* architecture */
 .arch{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
-.arch-item{padding:25px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.035)}
-.arch-num{font-family:Georgia,serif;color:#cbd5ec;font-size:14px;margin-bottom:18px}
-.arch-item h3{margin:0;font-size:21px;color:#fff}.arch-item p{margin:9px 0 0;color:#aebbd5;font-size:14px}
+.arch-item{min-height:360px;padding:25px 22px;border:1px solid var(--border);border-radius:17px;background:rgba(255,255,255,.035)}
+.arch-item h3{margin:0;color:var(--hci);font-size:21px}
+.arch-item .summary{display:block;color:#aebbd5;font-size:14px;line-height:1.7}
+.arch-item .detail{display:block;color:#fff;font-size:13px;line-height:1.8}
+
+/* comparison */
 .compare{margin-top:28px;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.025)}
-.row{display:grid;grid-template-columns:1.2fr 1fr 1fr}
-.row>div{padding:18px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}.row>div:last-child{border-right:0}.row:last-child>div{border-bottom:0}
-.head{font-weight:800;background:rgba(128,102,255,.10)}.hci-cell{color:#c9bcff;font-weight:700}.trad-cell{color:#c3cee5}
-.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
-.benefit{padding:26px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.035)}
-.benefit h3{margin:0 0 8px;font-size:19px}.benefit p{margin:0;color:#aebbd5;font-size:14px;line-height:1.75}
-.consider{margin-top:26px;padding:28px;border:1px solid rgba(242,184,91,.24);border-radius:18px;background:rgba(242,184,91,.035)}
-.consider ul{margin:0;padding-left:20px;color:#c7d1e6}.consider li{margin:8px 0}
+.row{display:grid;grid-template-columns:120px 1fr 1fr}
+.row>div{padding:19px 22px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.row>div:last-child{border-right:0}.row:last-child>div{border-bottom:0}
+.row.head{font-weight:800;background:rgba(128,102,255,.10)}.row.head>div:first-child{color:#aebbd5}
+.hci-cell{color:#c9bcff}.trad-cell{color:#c3cee5}
+.cell-title{display:block;color:#fff;font-weight:800;margin-bottom:5px}.cell-copy{display:block;color:#aebbd5;font-size:13px;line-height:1.75}
+
+/* rack comparison */
+.rack-section{margin-top:24px;padding:28px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.025)}
+.rack-grid{display:grid;grid-template-columns:1fr 90px 1fr;gap:20px;align-items:center}
+.rack-card{padding:18px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.025)}
+.rack-card h3{margin:0 0 14px;font-size:18px}.rack-card h3 span{color:#9fb3d4;font-size:12px;font-weight:400;margin-left:6px}
+.rack{width:210px;height:430px;margin:0 auto;border:8px solid #293b5d;border-radius:8px;background:#09162d;padding:10px;display:flex;flex-direction:column;gap:8px;box-shadow:inset 0 0 0 2px #6a7d9d}
+.unit{height:34px;border:2px solid #4f668d;border-radius:3px;background:linear-gradient(90deg,#152a4a,#35547b);display:flex;align-items:center;justify-content:center;color:#cbd8eb;font-size:10px}
+.unit.tall{height:50px}.unit.hci{height:92px;border-color:#8066ff;background:linear-gradient(90deg,#1d2755,#5a4f9b);color:#fff;font-weight:800}
+.rack-caption{text-align:center;color:#9fb2d1;font-size:12px;margin-top:12px;line-height:1.6}.rack-caption b{color:#fff}
+.rack-vs{color:var(--ai);font-size:17px;font-weight:800;text-align:center}
+.rack-note{margin-top:16px;color:#9eafd0;font-size:12px;text-align:center}
+
+/* considerations */
+.consider-intro{margin-top:25px;padding:24px;border:1px solid rgba(242,184,91,.24);border-radius:16px;background:rgba(242,184,91,.045)}
+.consider-intro strong{color:#fff}.consider-intro span{color:#c5d0e4}
+.consider-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
+.consider-card{min-height:330px;padding:18px;border:1px solid var(--border);border-radius:15px;background:rgba(255,255,255,.035)}
+.consider-icon{height:80px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.consider-icon svg{width:70px;height:70px}
+.consider-card h3{font-size:16px;margin:0 0 7px;color:#fff}.consider-card .question{color:#b7c3df;font-size:12px;line-height:1.6;margin-bottom:10px}.consider-card p{color:#fff;font-size:12px;line-height:1.75;margin:0}
+
+/* glossary */
 .glossary{margin-top:24px;padding:28px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.035)}
-.terms{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
-.term{padding:9px 14px;border:1px solid rgba(128,102,255,.35);border-radius:999px;background:rgba(128,102,255,.08);color:#dce2f5;font-size:13px}
-.term:hover{border-color:var(--hci);background:rgba(128,102,255,.16)}
-.glossary-link{display:flex;justify-content:space-between;margin-top:20px;padding:15px 17px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.035);font-weight:700;font-size:14px}
-.glossary-link span:last-child{color:var(--ai)}
+.terms{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.term{padding:9px 14px;border:1px solid rgba(128,102,255,.35);border-radius:999px;background:rgba(128,102,255,.08);color:#dce2f5;font-size:13px}.term:hover{border-color:var(--hci);background:rgba(128,102,255,.16)}
+.glossary-link{display:flex;justify-content:space-between;margin-top:20px;padding:15px 17px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.035);font-weight:700;font-size:14px}.glossary-link span:last-child{color:var(--ai)}
+.sources{margin-top:16px;color:#7f91ae;font-size:11px;line-height:1.7}.sources a{color:#9ebeff;text-decoration:underline}
 .bottom{margin-top:80px;padding-top:30px;display:flex;justify-content:space-between;color:#7f8eae;font-size:12px}
 
-/* HCI transition infographic — compact horizontal stage viewer */
-.transition{margin-top:28px}
-.transition-viewer{
-  position:relative;
-  min-height:330px;
-  padding:24px 58px 22px;
-  border:1px solid var(--border);
-  border-radius:18px;
-  background:linear-gradient(145deg,rgba(25,53,95,.70),rgba(8,25,54,.78));
-  overflow:hidden;
-}
-.t-stage{display:none;animation:stageIn .35s ease}
-.t-stage.active{display:block}
-.t-stage-title{display:flex;align-items:center;gap:12px;margin-bottom:17px}
-.t-num{
-  display:inline-flex;width:38px;height:27px;align-items:center;justify-content:center;
-  border-radius:20px;background:#2469c7;font-size:12px;font-weight:800
-}
-.t-stage.final .t-num{background:var(--hci)}
-.t-stage-title h3{font-size:20px;margin:0}
-.t-stage-title span{color:#91a6c7;font-size:12px}
-.t-content{
-  min-height:210px;
-  display:flex;align-items:center;justify-content:center;
-}
-.t-tier{
-  display:flex;align-items:center;justify-content:center;gap:22px;width:100%;
-}
-.t-tier-box{
-  min-width:135px;padding:15px 18px;border:1px solid rgba(112,154,221,.45);
-  border-radius:11px;background:rgba(31,70,123,.42);text-align:center
-}
-.t-tier-box strong{display:block;font-size:15px}.t-tier-box small{color:#93abd0;font-size:11px}
-.t-connector{color:#6da5ff;font-size:25px}
-.t-server-row{display:flex;gap:7px;align-items:flex-end;justify-content:center}
-.t-server{
-  width:48px;height:68px;border:2px solid #7897bf;border-radius:4px;
-  background:linear-gradient(90deg,#1a345b,#41668f);position:relative
-}
-.t-server:before{
-  content:"";position:absolute;left:6px;right:6px;top:10px;height:5px;border-radius:3px;
-  background:#69b7ff;box-shadow:0 13px #69b7ff,0 26px #69b7ff
-}
-.t-switch{
-  width:135px;height:24px;border:2px solid #7995b9;border-radius:4px;
-  background:#253b59;position:relative
-}
-.t-switch:after{content:"••••••••";letter-spacing:7px;color:#a9d0ff;position:absolute;left:13px;top:0;font-size:10px}
-.t-storage{display:flex;gap:5px}.t-disk{width:37px;height:42px;border:2px solid #8f83d8;border-radius:4px;background:#31345b}
-.t-disk:after{content:"";display:block;height:3px;margin:9px 6px;background:#7f8cff;box-shadow:0 10px #7f8cff}
-.t-3tier{
-  display:grid;grid-template-columns:1fr 80px 1fr;align-items:center;gap:18px;width:100%;
-  max-width:760px
-}
-.t-layer-stack{display:flex;flex-direction:column;gap:9px}
-.t-layer-box{
-  padding:12px;border:1px solid rgba(112,154,221,.45);border-radius:9px;
-  background:rgba(29,84,155,.42);text-align:center;font-size:12px
-}
-.t-layer-box b{color:#fff}.t-layer-box span{display:block;color:#91a9ca;font-size:10px}
-.t-big-arrow{font-size:38px;color:#6da5ff;text-align:center}
-.t-software{
-  width:100%;max-width:760px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px
-}
-.t-module{
-  padding:22px 12px;border:1px solid #5c82d8;border-radius:11px;
-  background:linear-gradient(145deg,rgba(32,89,163,.55),rgba(70,66,165,.42));text-align:center
-}
-.t-module strong{display:block;font-size:15px}.t-module small{color:#9eb2d2;font-size:10px}
-.t-software-label{
-  grid-column:1/-1;padding:11px;border-radius:9px;text-align:center;
-  background:linear-gradient(90deg,#173e80,#4c5fff,#6b55e8);
-  font-size:12px;font-weight:800;box-shadow:0 0 22px rgba(77,156,255,.18)
-}
-.t-scale{
-  display:flex;align-items:center;justify-content:center;gap:10px;width:100%
-}
-.t-node{
-  width:62px;height:78px;border:2px solid #7897bf;border-radius:5px;
-  background:linear-gradient(90deg,#1a345b,#41668f);position:relative;
-  display:flex;align-items:flex-end;justify-content:center;padding-bottom:7px;font-size:9px;color:#b8cae5
-}
-.t-node:before{content:"";position:absolute;left:8px;right:8px;top:10px;height:5px;background:#69b7ff;box-shadow:0 13px #69b7ff,0 26px #69b7ff}
-.t-node-add{
-  width:62px;height:78px;border:2px dashed #6d87ae;border-radius:5px;
-  display:flex;align-items:center;justify-content:center;font-size:31px;color:#6f9eff
-}
-.t-scale-caption{text-align:center;color:#9db7ff;font-size:12px;font-weight:700;margin-top:13px}
-.t-compare{
-  width:100%;display:grid;grid-template-columns:1fr 42px 1fr;gap:14px;align-items:center
-}
-.t-compare-side{
-  padding:18px;border:1px solid var(--border);border-radius:13px;background:rgba(255,255,255,.035)
-}
-.t-compare-side h4{margin:0 0 12px;font-size:15px}
-.t-compare-side ul{margin:0;padding-left:17px;color:#aebbd5;font-size:11px;line-height:1.7}
-.t-compare-side.hci{border-color:rgba(128,102,255,.62);background:rgba(128,102,255,.08)}
-.t-compare-side.hci h4{color:#c9bcff}
-.t-vs{text-align:center;color:var(--ai);font-size:13px;font-weight:800}
-.t-controls{
-  position:absolute;top:50%;transform:translateY(-50%);
-  width:38px;height:38px;border:1px solid rgba(128,166,225,.45);border-radius:50%;
-  background:rgba(8,24,53,.88);color:#fff;font-size:25px;cursor:pointer;z-index:3
-}
-.t-controls:hover{border-color:#8066ff;background:rgba(128,102,255,.22)}
-.t-prev{left:12px}.t-next{right:12px}
-.t-dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
-.t-dot{
-  width:8px;height:8px;border-radius:50%;border:0;padding:0;background:#4d6790;cursor:pointer
-}
-.t-dot.active{width:25px;border-radius:8px;background:var(--hci)}
-.t-hint{text-align:center;margin-top:9px;color:#7f91b0;font-size:11px}
-@keyframes stageIn{from{opacity:.35;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
-@media(max-width:900px){
-  .transition-viewer{padding:22px 48px}
-  .t-3tier{grid-template-columns:1fr 45px 1fr}
-  .t-tier{gap:10px}.t-tier-box{min-width:110px;padding:12px 9px}
-  .t-compare{grid-template-columns:1fr}
-  .t-vs{display:none}
+/* simple SVG rack/icon styles */
+.svg-label{font-family:Arial,"Noto Sans KR",sans-serif;fill:#dce6f8;font-size:10px}
+.svg-small{font-family:Arial,"Noto Sans KR",sans-serif;fill:#91a8cb;font-size:8px}
+@media(max-width:980px){
+  .concepts,.arch{grid-template-columns:1fr 1fr}.consider-grid{grid-template-columns:repeat(2,1fr)}
+  .rack-grid{grid-template-columns:1fr}.rack-vs{display:none}
 }
 @media(max-width:760px){
-  .header,.page{width:min(100% - 36px,1100px)}
-  .header{height:76px}.nav{gap:15px;font-size:12px}.page{padding-top:55px}.lead{font-size:18px}
-  .concepts,.arch{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr}
-  .row{grid-template-columns:1fr}.row>div{border-right:0}.bottom{flex-direction:column;gap:14px}
+  .header,.page{width:min(100% - 36px,1160px)}.header{height:76px}.nav{gap:15px;font-size:12px}.page{padding-top:55px}.lead{font-size:18px}
+  .concepts,.arch{grid-template-columns:1fr}.consider-grid{grid-template-columns:1fr}
+  .row{grid-template-columns:90px 1fr 1fr}.row>div{padding:15px 12px;font-size:12px}
+  .transition-viewer{padding:23px 50px}.t-3tier{grid-template-columns:1fr}.t-big-arrow{transform:rotate(90deg)}.t-software{grid-template-columns:1fr}.t-software-label{grid-column:auto}
+  .t-scale{flex-wrap:wrap}.t-compare{grid-template-columns:1fr}.t-vs{display:none}
+  .rack{width:180px;height:380px}
 }
 @media(max-width:480px){
-  .nav{display:none}h1{font-size:50px}.concepts,.arch{grid-template-columns:1fr}
+  .nav{display:none}h1{font-size:50px}.row{grid-template-columns:1fr}.row>div{border-right:0}.rack{width:160px}
 }
 </style>
 </head>
@@ -195,181 +147,229 @@ h2{margin:0;font-size:32px;letter-spacing:-.025em}
 <section>
   <div class="eyebrow">01 · HCI / BASICS</div>
   <h1>What is HCI?</h1>
-  <p class="lead">HCI는 Compute, Storage, Network를 하나의 Software-Defined Infrastructure로 통합하고, 분산·확장·자동화를 통해 인프라 운영을 단순화하는 현대적인 데이터센터 아키텍처입니다.</p>
+  <p class="lead">HCI는 Compute, Storage, Network를 하나의 Software-Defined Infrastructure로 통합하고, 분산·확장·자동화를 통해 인프라 운영을 단순화하는 <b>차세대</b> 데이터센터 아키텍처입니다.</p>
 </section>
 
 <section class="section">
   <div class="label">THE CONCEPT</div>
   <h2>HCI는 무엇을 바꾸는가?</h2>
   <p class="section-copy">전통적인 인프라의 개별 시스템 중심 구조를 소프트웨어 중심의 통합 인프라로 전환합니다.</p>
-  <div class="intro"><p>기존 3-Tier Infrastructure에서는 서버, 스토리지, 네트워크를 각각 설계하고 운영하는 경우가 일반적입니다. HCI는 이 기능들을 소프트웨어 계층에서 통합하고 여러 노드에 분산하여 하나의 논리적인 인프라처럼 운영할 수 있도록 합니다.</p></div>
+  <div class="intro">
+    <p>기존 3-Tier Infrastructure에서는 서버, 스토리지, 네트워크를 각각 설계하고 운영하는 경우가 일반적입니다.</p>
+    <p>HCI는 이 기능들을 소프트웨어 계층에서 통합하고 여러 노드에 분산하여 하나의 논리적인 인프라처럼 운영할 수 있도록 합니다.</p>
+  </div>
 
   <div class="transition">
-  <div class="transition-viewer">
-    <button class="t-controls t-prev" type="button" aria-label="이전 단계">‹</button>
-    <button class="t-controls t-next" type="button" aria-label="다음 단계">›</button>
+    <div class="transition-viewer">
+      <button class="t-controls t-prev" type="button" aria-label="이전 단계">‹</button>
+      <button class="t-controls t-next" type="button" aria-label="다음 단계">›</button>
 
-    <article class="t-stage active" data-stage="1">
-      <div class="t-stage-title">
-        <span class="t-num">01</span>
-        <h3>기존 3-Tier Infrastructure</h3>
-        <span>Server · Network · Storage 분리</span>
-      </div>
-      <div class="t-content">
-        <div class="t-3tier">
-          <div class="t-layer-stack">
-            <div class="t-layer-box"><b>Compute</b><span>서버 / VM</span></div>
-            <div class="t-layer-box"><b>Network</b><span>Switch / SAN</span></div>
-            <div class="t-layer-box"><b>Storage</b><span>외부 공유 스토리지</span></div>
-          </div>
-          <div class="t-big-arrow">→</div>
-          <div style="text-align:center;color:#9eb1ce;font-size:12px;line-height:1.8">
-            각 계층을<br><strong style="color:#fff">별도로 설계·운영</strong><br>해야 하는 구조
+      <article class="t-stage active" data-stage="1">
+        <div class="t-stage-title"><span class="t-num">01</span><h3>기존 3-Tier Infrastructure</h3><span>Server · Network · Storage 분리</span></div>
+        <div class="t-content">
+          <div class="t-3tier">
+            <div class="t-layer-stack">
+              <div class="t-layer-box"><b>Compute</b><span>서버 / VM</span></div>
+              <div class="t-layer-box"><b>Network</b><span>Switch / SAN</span></div>
+              <div class="t-layer-box"><b>Storage</b><span>외부 공유 스토리지</span></div>
+            </div>
+            <div class="t-big-arrow">→</div>
+            <div style="text-align:center;color:#a5b8d6;font-size:15px;line-height:1.9">각 계층을<br><strong style="color:#fff;font-size:18px">별도로 설계 · 운영</strong><br>해야 하는 구조</div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="t-stage" data-stage="2">
-      <div class="t-stage-title">
-        <span class="t-num">02</span>
-        <h3>소프트웨어로 기능 통합</h3>
-        <span>Software-Defined Infrastructure</span>
-      </div>
-      <div class="t-content">
-        <div class="t-software">
-          <div class="t-module"><strong>Compute</strong><small>CPU · Memory</small></div>
-          <div class="t-module"><strong>Storage</strong><small>Distributed Storage</small></div>
-          <div class="t-module"><strong>Network</strong><small>Virtual Network</small></div>
-          <div class="t-software-label">통합 Software Layer · Virtualization · Automation · Management</div>
-        </div>
-      </div>
-    </article>
-
-    <article class="t-stage" data-stage="3">
-      <div class="t-stage-title">
-        <span class="t-num">03</span>
-        <h3>노드 추가로 수평 확장</h3>
-        <span>Scale-Out Architecture</span>
-      </div>
-      <div class="t-content">
-        <div>
-          <div class="t-scale">
-            <div class="t-node">NODE 01</div>
-            <div class="t-node">NODE 02</div>
-            <div class="t-node">NODE 03</div>
-            <div class="t-node-add">+</div>
-          </div>
-          <div class="t-scale-caption">노드가 추가되면 Compute + Storage 자원이 함께 증가</div>
-        </div>
-      </div>
-    </article>
-
-    <article class="t-stage final" data-stage="4">
-      <div class="t-stage-title">
-        <span class="t-num">04</span>
-        <h3>3-Tier와 HCI의 구조 비교</h3>
-        <span>Before → HCI</span>
-      </div>
-      <div class="t-content">
-        <div class="t-compare">
-          <div class="t-compare-side">
-            <h4>Traditional 3-Tier</h4>
-            <ul>
-              <li>Compute / Network / Storage 분리</li>
-              <li>계층별 별도 설계와 관리</li>
-              <li>확장 시 각 계층의 용량·성능 검토</li>
-              <li>전문 영역별 운영 도구와 관리 필요</li>
-            </ul>
-          </div>
-          <div class="t-vs">VS</div>
-          <div class="t-compare-side hci">
-            <h4>HCI</h4>
-            <ul>
-              <li>Compute + Storage + Network 통합</li>
-              <li>Software-Defined 통합 관리</li>
-              <li>노드 추가 중심 Scale-Out</li>
-              <li>자동화와 표준화로 운영 복잡도 감소</li>
-            </ul>
+      <article class="t-stage" data-stage="2">
+        <div class="t-stage-title"><span class="t-num">02</span><h3>소프트웨어로 기능 통합</h3><span>Software-Defined Infrastructure</span></div>
+        <div class="t-content">
+          <div class="t-software">
+            <div class="t-module"><strong>Compute</strong><small>CPU · Memory</small></div>
+            <div class="t-module"><strong>Storage</strong><small>Distributed Storage</small></div>
+            <div class="t-module"><strong>Network</strong><small>Virtual Network</small></div>
+            <div class="t-software-label">가상화 · 통합 소프트웨어 레이어 · 정책 · 자동화 · 통합 관리</div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+
+      <article class="t-stage" data-stage="3">
+        <div class="t-stage-title"><span class="t-num">03</span><h3>노드 추가로 수평 확장</h3><span>Scale-Out Architecture</span></div>
+        <div class="t-content">
+          <div><div class="t-scale"><div class="t-node">NODE 01</div><div class="t-node">NODE 02</div><div class="t-node">NODE 03</div><div class="t-node-add">+</div></div><div class="t-scale-caption">노드가 추가되면 Compute + Storage 자원이 함께 증가</div></div>
+        </div>
+      </article>
+
+      <article class="t-stage final" data-stage="4">
+        <div class="t-stage-title"><span class="t-num">04</span><h3>3-Tier와 HCI의 구조 비교</h3><span>Before → HCI</span></div>
+        <div class="t-content">
+          <div class="t-compare">
+            <div class="t-compare-side"><h4>Traditional 3-Tier</h4><ul><li>Compute / Network / Storage 분리</li><li>계층별 별도 설계와 관리</li><li>확장 시 각 계층의 용량·성능 검토</li><li>전문 영역별 운영 도구와 관리 필요</li></ul></div>
+            <div class="t-vs">VS</div>
+            <div class="t-compare-side hci"><h4>HCI</h4><ul><li>Compute + Storage + Network 통합</li><li>Software-Defined 통합 관리</li><li>노드 추가 중심 Scale-Out</li><li>자동화와 표준화로 운영 복잡도 감소</li></ul></div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="t-dots"><button class="t-dot active" data-go="1" aria-label="01"></button><button class="t-dot" data-go="2" aria-label="02"></button><button class="t-dot" data-go="3" aria-label="03"></button><button class="t-dot" data-go="4" aria-label="04"></button></div>
   </div>
-
-  <div class="t-dots" aria-label="단계 선택">
-    <button class="t-dot active" data-go="1" aria-label="01 단계"></button>
-    <button class="t-dot" data-go="2" aria-label="02 단계"></button>
-    <button class="t-dot" data-go="3" aria-label="03 단계"></button>
-    <button class="t-dot" data-go="4" aria-label="04 단계"></button>
-  </div>
-  <div class="t-hint">← → 버튼을 눌러 3-Tier에서 HCI로의 변화를 단계별로 확인할 수 있습니다.</div>
-</div>
 </section>
 
 <section class="section">
-  <div class="label">CORE CONCEPTS</div><h2>HCI를 이해하는 네 가지 핵심 개념</h2>
+  <div class="label">CORE CONCEPTS</div>
+  <h2>HCI를 이해하는 네 가지 핵심 개념</h2>
+  <p class="section-copy">HCI의 구조를 이해할 때 자주 사용하는 네 가지 개념을 개념 소개와 VMware 관점의 세부 설명으로 나누어 봅니다.</p>
   <div class="concepts">
-    <div class="concept"><strong>Converged</strong><span>Compute + Storage + Network를 하나의 플랫폼으로 통합</span></div>
-    <div class="concept"><strong>Software-Defined</strong><span>하드웨어와 기능을 소프트웨어 계층에서 추상화하고 자동화</span></div>
-    <div class="concept"><strong>Distributed</strong><span>데이터와 서비스를 여러 노드에 분산하여 구성</span></div>
-    <div class="concept"><strong>Scale-Out</strong><span>노드를 추가하면서 성능과 용량을 함께 확장</span></div>
+    <article class="concept">
+      <strong>Converged</strong>
+      <span class="intro-label">개념소개</span><span class="summary">Compute + Storage + Network를 하나의 플랫폼으로 통합</span>
+      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">VMware Cloud Foundation(VCF)은 vSphere 기반의 Compute 가상화에 vSAN Storage와 NSX Network를 결합해 하나의 Software-Defined 데이터센터 스택으로 운영하는 방향을 취합니다. 즉 서버·스토리지·네트워크를 물리적으로 하나의 장비로 만드는 것이 아니라, 각 자원을 소프트웨어 계층에서 추상화하고 공통 관리 체계로 연결하는 것이 핵심입니다.</span>
+    </article>
+    <article class="concept">
+      <strong>Software-Defined</strong>
+      <span class="intro-label">개념소개</span><span class="summary">하드웨어와 기능을 소프트웨어 계층에서 추상화하고 자동화</span>
+      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">VMware는 vSphere, vSAN, NSX와 VCF Operations/Automation을 통해 Compute·Storage·Network·Management 기능을 소프트웨어로 정의하고 정책 기반으로 운영합니다. 하드웨어의 개별 설정에 의존하기보다 가상화와 정책, API 및 통합 관리 계층을 활용해 반복 작업을 표준화하는 것이 Software-Defined 접근의 핵심입니다.</span>
+    </article>
+    <article class="concept">
+      <strong>Distributed</strong>
+      <span class="intro-label">개념소개</span><span class="summary">데이터와 서비스를 여러 노드에 분산하여 구성</span>
+      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">vSAN은 여러 ESXi 호스트의 로컬 디스크를 클러스터 차원의 공유 데이터스토어로 묶는 분산 스토리지 구조를 제공합니다. VM과 데이터 서비스는 클러스터 정책에 따라 여러 호스트의 자원을 활용하며, 네트워크와 관리 기능 역시 클러스터 전체를 대상으로 동작하도록 설계할 수 있습니다.</span>
+    </article>
+    <article class="concept">
+      <strong>Scale-Out</strong>
+      <span class="intro-label">개념소개</span><span class="summary">노드를 추가하면서 성능과 용량을 함께 확장</span>
+      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">HCI에서는 단일 대형 서버를 교체하는 방식보다 클러스터에 노드를 추가해 자원을 확장하는 방식이 중요합니다. VMware HCI/VCF 환경에서도 클러스터 단위로 CPU·Memory와 분산 스토리지 자원을 확장하며, 실제 설계에서는 최소 구성, 장애 여유 용량, 네트워크 대역폭, 워크로드 증가량을 함께 검토해야 합니다.</span>
+    </article>
   </div>
 </section>
 
 <section class="section">
-  <div class="label">ARCHITECTURE</div><h2>HCI Architecture</h2>
-  <p class="section-copy">HCI를 구성하는 주요 계층과 역할을 단순화해서 보면 다음과 같습니다.</p>
+  <div class="label">ARCHITECTURE</div>
+  <h2>HCI Architecture</h2>
+  <p class="section-copy">HCI는 단순히 서버를 묶는 것이 아니라 Compute, Storage, Network, Management가 소프트웨어 계층에서 연결되는 구조입니다.</p>
   <div class="arch">
-    <div class="arch-item"><div class="arch-num">01</div><h3>Compute</h3><p>VM과 애플리케이션을 실행하는 CPU·Memory 자원</p></div>
-    <div class="arch-item"><div class="arch-num">02</div><h3>Storage</h3><p>노드 내부 디스크를 활용해 분산 스토리지를 구성</p></div>
-    <div class="arch-item"><div class="arch-num">03</div><h3>Network</h3><p>노드 간 통신과 VM·스토리지 트래픽을 연결</p></div>
-    <div class="arch-item"><div class="arch-num">04</div><h3>Management</h3><p>가상화·스토리지·정책·모니터링을 통합 관리</p></div>
+    <article class="arch-item">
+      <h3>Compute</h3><span class="intro-label">개념</span><span class="summary">가상머신과 애플리케이션을 실행하는 CPU·Memory 계층</span>
+      <span class="intro-label">상세한 역할</span><span class="detail">하이퍼바이저가 물리 CPU와 Memory를 가상화해 VM에 할당합니다. 클러스터에서는 HA, DRS와 같은 기능을 통해 워크로드 배치와 장애 대응을 지원하며, HCI에서는 Compute 자원이 Storage와 동일한 노드 자원 풀의 일부로 사용됩니다.</span>
+    </article>
+    <article class="arch-item">
+      <h3>Storage</h3><span class="intro-label">개념</span><span class="summary">노드 내부 디스크를 활용해 분산 스토리지를 구성</span>
+      <span class="intro-label">상세한 역할</span><span class="detail">HCI의 Storage 계층은 각 노드의 SSD/NVMe/HDD를 클러스터 단위의 논리적 데이터스토어로 구성합니다. VMware vSAN 관점에서는 정책 기반으로 데이터 보호와 성능 요구를 정의하고 여러 호스트의 디스크 자원을 활용합니다.</span>
+    </article>
+    <article class="arch-item">
+      <h3>Network</h3><span class="intro-label">개념</span><span class="summary">노드 간 통신과 VM·스토리지 트래픽을 연결</span>
+      <span class="intro-label">상세한 역할</span><span class="detail">HCI에서는 VM 트래픽뿐 아니라 관리, 스토리지, 클러스터 통신이 모두 네트워크 품질에 영향을 받습니다. VMware 환경에서는 vSphere Distributed Switch와 NSX를 활용해 가상 스위칭, 오버레이, 정책 및 보안 기능을 소프트웨어 계층에서 구성할 수 있습니다.</span>
+    </article>
+    <article class="arch-item">
+      <h3>Management</h3><span class="intro-label">개념</span><span class="summary">가상화·스토리지·정책·모니터링을 통합 관리</span>
+      <span class="intro-label">상세한 역할</span><span class="detail">관리 계층은 개별 장비 설정을 넘어 클러스터 전체의 구성, 수명주기, 모니터링과 정책을 다룹니다. VCF에서는 SDDC Manager와 VCF Operations/Automation 계층을 통해 배포·수명주기·운영 가시성을 통합하는 방향을 취합니다.</span>
+    </article>
   </div>
 </section>
 
 <section class="section">
-  <div class="label">HCI vs 3-TIER</div><h2>HCI와 기존 3-Tier Infrastructure</h2>
-  <p class="section-copy">구조와 운영 관점에서 보면 가장 큰 차이는 인프라의 통합 수준과 운영 방식입니다.</p>
+  <div class="label">HCI vs 3-TIER</div>
+  <h2>HCI와 기존 3-Tier Infrastructure</h2>
+  <p class="section-copy">항목 영역은 최소화하고, 실제 인프라 운영자가 판단해야 하는 구조적 차이를 넓은 설명 영역에 배치했습니다.</p>
   <div class="compare">
     <div class="row head"><div>항목</div><div>Traditional 3-Tier</div><div>HCI</div></div>
-    <div class="row"><div>구성</div><div class="trad-cell">Server · SAN · Network 개별 구성</div><div class="hci-cell">Compute · Storage · Network 통합</div></div>
-    <div class="row"><div>확장</div><div class="trad-cell">각 계층별 용량·성능 계획</div><div class="hci-cell">노드 추가 중심 Scale-Out</div></div>
-    <div class="row"><div>운영</div><div class="trad-cell">여러 관리 도구와 전문 영역 필요</div><div class="hci-cell">통합 관리와 자동화 중심</div></div>
-    <div class="row"><div>구축</div><div class="trad-cell">구성 요소별 설계·통합 작업</div><div class="hci-cell">사전 통합된 플랫폼 중심</div></div>
-    <div class="row"><div>장애 대응</div><div class="trad-cell">계층별 영향 분석 필요</div><div class="hci-cell">분산 구조와 소프트웨어 기반 정책 활용</div></div>
+    <div class="row"><div>구성</div><div class="trad-cell"><span class="cell-title">계층별 분리</span><span class="cell-copy">Server, SAN/NAS Storage, Network를 각각 설계하고 연결합니다. 각 계층의 호환성·용량·성능·이중화를 별도로 검토해야 합니다.</span></div><div class="hci-cell"><span class="cell-title">통합 플랫폼</span><span class="cell-copy">Compute, Storage, Network를 하나의 클러스터와 소프트웨어 관리 체계로 묶어 자원을 통합적으로 운영합니다.</span></div></div>
+    <div class="row"><div>확장</div><div class="trad-cell"><span class="cell-title">계층별 증설</span><span class="cell-copy">서버가 부족한지, 스토리지가 부족한지, 네트워크가 병목인지 먼저 구분한 뒤 필요한 계층을 각각 증설합니다.</span></div><div class="hci-cell"><span class="cell-title">노드 중심 Scale-Out</span><span class="cell-copy">노드를 추가해 Compute와 Storage 자원을 함께 늘리는 것이 기본 방식입니다. 다만 워크로드 특성에 따라 자원 비율과 네트워크 요구를 함께 검토해야 합니다.</span></div></div>
+    <div class="row"><div>운영</div><div class="trad-cell"><span class="cell-title">전문 영역 분리</span><span class="cell-copy">서버·스토리지·네트워크 담당 영역이 나뉘고 여러 관리 도구를 사용합니다. 장애 발생 시 계층 간 원인 분석과 협업이 필요합니다.</span></div><div class="hci-cell"><span class="cell-title">통합 관리</span><span class="cell-copy">클러스터 단위 관리와 정책 기반 운영을 통해 반복 작업과 구성 편차를 줄일 수 있습니다.</span></div></div>
+    <div class="row"><div>구축</div><div class="trad-cell"><span class="cell-title">통합 설계 필요</span><span class="cell-copy">서버·SAN·스위치·스토리지의 상호운용성과 케이블링, 펌웨어, 호환성 등을 종합적으로 검증합니다.</span></div><div class="hci-cell"><span class="cell-title">사전 통합 플랫폼</span><span class="cell-copy">검증된 노드와 소프트웨어 스택을 기준으로 설계해 구축 절차와 표준화를 단순화할 수 있습니다.</span></div></div>
+    <div class="row"><div>장애</div><div class="trad-cell"><span class="cell-title">계층별 영향 분석</span><span class="cell-copy">장애 지점에 따라 서버, SAN, 스위치, 스토리지 등 여러 영역을 확인해야 합니다.</span></div><div class="hci-cell"><span class="cell-title">분산·정책 기반 대응</span><span class="cell-copy">분산 구조와 클러스터 정책을 이용해 장애 도메인과 데이터 보호 수준을 설계하고 운영합니다.</span></div></div>
+  </div>
+
+  <div class="rack-section">
+    <div class="label">RACK FOOTPRINT</div>
+    <h3 style="margin:0 0 6px;font-size:21px">동일한 렉 공간에서 보는 구성 차이</h3>
+    <p class="section-copy">아래는 이해를 위한 예시 구성입니다. 실제 랙 유닛은 장비 모델과 네트워크·전원 구성에 따라 달라집니다.</p>
+    <div class="rack-grid">
+      <div class="rack-card">
+        <h3>Traditional 3-Tier <span>예시</span></h3>
+        <div class="rack" aria-label="3-Tier rack diagram">
+          <div class="unit">TOR Switch</div><div class="unit">Network Switch</div><div class="unit">L4</div><div class="unit">Web Firewall</div>
+          <div class="unit">Server 01</div><div class="unit">Server 02</div><div class="unit">Server 03</div><div class="unit">Server 04</div><div class="unit">Server 05</div><div class="unit">Server 06</div><div class="unit">Server 07</div><div class="unit">Server 08</div><div class="unit">Server 09</div>
+          <div class="unit tall">Storage 4U × 3</div><div class="unit">Console / KVM</div>
+        </div>
+        <div class="rack-caption"><b>여러 계층의 장비가 각각 공간을 차지</b><br>서버 9대 + 외장 스토리지 + 네트워크/보안 장비</div>
+      </div>
+      <div class="rack-vs">VS</div>
+      <div class="rack-card">
+        <h3>HCI <span>예시</span></h3>
+        <div class="rack" aria-label="HCI rack diagram">
+          <div class="unit">TOR Switch</div><div class="unit">Network / Security</div>
+          <div class="unit hci">HCI Node 01</div><div class="unit hci">HCI Node 02</div><div class="unit hci">HCI Node 03</div>
+          <div class="unit" style="opacity:.35">Reserved / Expansion</div>
+        </div>
+        <div class="rack-caption"><b>노드 내부에 Compute + Storage가 통합</b><br>외장 스토리지와 다수의 서버 장비를 별도 배치하지 않는 구조</div>
+      </div>
+    </div>
+    <div class="rack-note">※ 위 그림은 구조적 차이를 설명하기 위한 개념도이며 실제 랙 U, 장비 크기, 네트워크 장비 수량은 구축 설계에 따라 달라집니다.</div>
   </div>
 </section>
 
 <section class="section">
-  <div class="label">WHY HCI</div><h2>HCI의 주요 장점</h2>
-  <div class="benefits">
-    <div class="benefit"><h3>운영 단순화</h3><p>서버와 스토리지 등 여러 인프라 영역을 하나의 플랫폼 관점에서 관리할 수 있어 운영 복잡도를 낮출 수 있습니다.</p></div>
-    <div class="benefit"><h3>빠른 확장</h3><p>필요한 시점에 노드를 추가하는 방식으로 인프라의 용량과 성능을 단계적으로 확장할 수 있습니다.</p></div>
-    <div class="benefit"><h3>자동화</h3><p>소프트웨어 기반 정책과 통합 관리 기능을 통해 반복적인 인프라 운영 작업을 자동화할 수 있습니다.</p></div>
-    <div class="benefit"><h3>표준화</h3><p>사전 정의된 플랫폼과 운영 방식을 활용하여 구축과 운영 환경을 표준화하기 쉽습니다.</p></div>
+  <div class="label">CONSIDERATIONS</div>
+  <h2>HCI 도입 시 고려사항</h2>
+  <div class="consider-intro"><strong>IT 담당자가 실제 도입 단계에서 고민하는 질문</strong><br><span>“기존 인프라를 바꾸면 무엇이 좋아지는가?”에서 끝나지 않고, 성능·비용·이관·장애·운영 역량까지 함께 판단해야 합니다.</span></div>
+
+  <div class="consider-grid">
+    <article class="consider-card">
+      <div class="consider-icon">
+        <svg viewBox="0 0 80 80"><rect x="12" y="15" width="56" height="48" rx="5" fill="#203b68" stroke="#6fa8ff"/><path d="M22 52V37M34 52V29M46 52V41M58 52V23" stroke="#b7ff00" stroke-width="5"/><path d="M20 58h42" stroke="#8da8d0" stroke-width="2"/></svg>
+      </div>
+      <h3>TCO · 비용</h3>
+      <div class="question">“초기 구축비와 5년 비용이 실제로 유리한가?”</div>
+      <p>라이선스, 유지보수, 서버·스토리지 증설, 전력·상면, 운영 인력까지 포함한 전체 TCO로 비교해야 합니다. 단순 장비 가격만으로 판단하면 안 됩니다.</p>
+    </article>
+
+    <article class="consider-card">
+      <div class="consider-icon">
+        <svg viewBox="0 0 80 80"><rect x="13" y="13" width="54" height="54" rx="7" fill="#203b68" stroke="#6fa8ff"/><path d="M25 25h30v30H25z" fill="none" stroke="#a9c7ff"/><path d="M30 40l7 7 14-16" fill="none" stroke="#b7ff00" stroke-width="5"/></svg>
+      </div>
+      <h3>Migration · 전환</h3>
+      <div class="question">“기존 VM과 데이터는 안전하게 옮길 수 있는가?”</div>
+      <p>기존 가상화 환경, 스토리지, 백업·DR 구조와의 연계성을 먼저 확인해야 합니다. 서비스 중단 시간과 단계적 전환 계획도 설계해야 합니다.</p>
+    </article>
+
+    <article class="consider-card">
+      <div class="consider-icon">
+        <svg viewBox="0 0 80 80"><path d="M40 11l25 9v18c0 15-10 25-25 31C25 63 15 53 15 38V20z" fill="#203b68" stroke="#6fa8ff" stroke-width="2"/><path d="M27 40l8 8 18-20" fill="none" stroke="#b7ff00" stroke-width="5"/></svg>
+      </div>
+      <h3>Availability · 장애</h3>
+      <div class="question">“노드 하나가 장애 나면 서비스는 계속되는가?”</div>
+      <p>노드 장애, 디스크 장애, 네트워크 장애를 각각 가정하고 N+1 여유, 데이터 보호 정책, 장애 도메인, 복구 시간과 성능 저하를 검토해야 합니다.</p>
+    </article>
+
+    <article class="consider-card">
+      <div class="consider-icon">
+        <svg viewBox="0 0 80 80"><rect x="17" y="12" width="46" height="55" rx="5" fill="#203b68" stroke="#6fa8ff"/><path d="M27 26h26M27 38h26M27 50h16" stroke="#a9c7ff" stroke-width="3"/><circle cx="55" cy="51" r="7" fill="#b7ff00"/></svg>
+      </div>
+      <h3>Security · 정책</h3>
+      <div class="question">“기존 보안정책과 충돌하지 않는가?”</div>
+      <p>네트워크 분리, 방화벽, 접근제어, 암호화, 관리망 분리와 같은 기존 보안 요구사항이 HCI 구조에서도 동일하게 구현되는지 확인해야 합니다.</p>
+    </article>
+
+    <article class="consider-card">
+      <div class="consider-icon">
+        <svg viewBox="0 0 80 80"><circle cx="40" cy="29" r="13" fill="#203b68" stroke="#6fa8ff"/><path d="M18 66c2-15 12-23 22-23s20 8 22 23" fill="#203b68" stroke="#6fa8ff"/><path d="M28 58h24" stroke="#b7ff00" stroke-width="4"/></svg>
+      </div>
+      <h3>Operation · 인력</h3>
+      <div class="question">“우리 운영팀이 새로운 플랫폼을 관리할 수 있는가?”</div>
+      <p>기존 서버·SAN 중심의 운영 역량에서 클러스터·가상화·분산 스토리지·정책 기반 운영으로 역량이 이동합니다. 교육과 운영 표준화까지 계획해야 합니다.</p>
+    </article>
   </div>
 </section>
 
 <section class="section">
-  <div class="label">CONSIDERATIONS</div><h2>HCI 도입 시 고려사항</h2>
-  <div class="consider"><ul>
-    <li>워크로드 특성에 맞는 CPU, Memory, Storage 구성과 노드 비율을 검토해야 합니다.</li>
-    <li>플랫폼별 Hypervisor, Storage Architecture, Network 구조의 차이를 확인해야 합니다.</li>
-    <li>라이선스와 유지보수 비용을 포함한 전체 TCO 관점에서 비교해야 합니다.</li>
-    <li>확장 계획과 장애 시나리오, 데이터 보호 정책을 사전에 설계해야 합니다.</li>
-    <li>기존 환경에서의 Migration 및 운영 인력의 기술 역량도 함께 고려해야 합니다.</li>
-  </ul></div>
-</section>
-
-<section class="section">
-  <div class="label">TECHNOLOGY GLOSSARY</div><h2>HCI 주요 용어</h2>
-  <p class="section-copy">HCI Basics에서 자주 사용하는 핵심 용어를 Technology Glossary에서 확인할 수 있습니다.</p>
+  <div class="label">TECHNOLOGY GLOSSARY</div>
+  <h2>HCI 주요 용어</h2>
+  <p class="section-copy">HCI Basics에서 사용하는 핵심 용어를 Technology Glossary에서 자세히 확인할 수 있습니다.</p>
   <div class="glossary">
     <div class="terms">
       <a class="term" href="../05/glossary.html">HCI</a><a class="term" href="../05/glossary.html">Compute</a><a class="term" href="../05/glossary.html">Storage</a><a class="term" href="../05/glossary.html">Network</a><a class="term" href="../05/glossary.html">Hypervisor</a><a class="term" href="../05/glossary.html">Virtualization</a><a class="term" href="../05/glossary.html">SDS</a><a class="term" href="../05/glossary.html">SDN</a><a class="term" href="../05/glossary.html">Scale-Out</a><a class="term" href="../05/glossary.html">TCO</a>
     </div>
     <a class="glossary-link" href="../05/glossary.html"><span>Technology Glossary에서 전체 용어 보기</span><span>→</span></a>
+    <div class="sources">VMware 관점의 설명은 현재 VMware Cloud Foundation 구성요소(vSphere, vSAN, NSX, VCF Operations/Automation 및 SDDC Manager)의 공식 Broadcom 문서를 기준으로 표현했습니다. <a href="https://developer.broadcom.com/xapis/vmware-cloud-foundation-api/latest/" target="_blank" rel="noopener">VCF API Reference</a> · <a href="https://compatibilityguide.broadcom.com/" target="_blank" rel="noopener">Broadcom Compatibility Guide</a></div>
   </div>
 </section>
 
@@ -378,28 +378,13 @@ h2{margin:0;font-size:32px;letter-spacing:-.025em}
 
 <script>
 (() => {
-  const stages = [...document.querySelectorAll('.t-stage')];
-  const dots = [...document.querySelectorAll('.t-dot')];
-  const prev = document.querySelector('.t-prev');
-  const next = document.querySelector('.t-next');
-  let current = 0;
-
-  function showStage(index){
-    current = (index + stages.length) % stages.length;
-    stages.forEach((el,i)=>el.classList.toggle('active', i === current));
-    dots.forEach((el,i)=>el.classList.toggle('active', i === current));
-  }
-
-  prev.addEventListener('click', () => showStage(current - 1));
-  next.addEventListener('click', () => showStage(current + 1));
-  dots.forEach(dot => dot.addEventListener('click', () => showStage(Number(dot.dataset.go) - 1)));
-
-  document.addEventListener('keydown', e => {
-    if(e.key === 'ArrowRight') showStage(current + 1);
-    if(e.key === 'ArrowLeft') showStage(current - 1);
-  });
+  const stages=[...document.querySelectorAll('.t-stage')],dots=[...document.querySelectorAll('.t-dot')];
+  const prev=document.querySelector('.t-prev'),next=document.querySelector('.t-next'); let current=0;
+  function showStage(index){current=(index+stages.length)%stages.length;stages.forEach((el,i)=>el.classList.toggle('active',i===current));dots.forEach((el,i)=>el.classList.toggle('active',i===current));}
+  prev.addEventListener('click',()=>showStage(current-1));next.addEventListener('click',()=>showStage(current+1));
+  dots.forEach(dot=>dot.addEventListener('click',()=>showStage(Number(dot.dataset.go)-1)));
+  document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')showStage(current+1);if(e.key==='ArrowLeft')showStage(current-1);});
 })();
 </script>
-
 </body>
 </html>
