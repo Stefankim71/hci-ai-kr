@@ -39,11 +39,12 @@ h3{letter-spacing:-.02em}
 .t-stage.final .t-num{background:var(--hci)}
 .t-stage-title h3{font-size:21px;margin:0}.t-stage-title span{color:#91a6c7;font-size:13px}
 .t-content{min-height:275px;display:flex;align-items:center;justify-content:center}
-.t-3tier{display:grid;grid-template-columns:1fr 105px 1fr;align-items:center;gap:28px;width:100%;max-width:900px}
-.t-layer-stack{display:flex;flex-direction:column;gap:11px}
-.t-layer-box{padding:16px;border:1px solid rgba(112,154,221,.5);border-radius:10px;background:rgba(29,84,155,.44);text-align:center}
-.t-layer-box b{display:block;font-size:17px}.t-layer-box span{display:block;color:#a6b9d7;font-size:12px;margin-top:3px}
-.t-big-arrow{color:#79adff;font-size:56px;text-align:center}
+.t-3tier{display:grid;grid-template-columns:300px 1fr;align-items:center;gap:28px;width:100%;max-width:900px}
+.t-layer-stack{position:relative;display:flex;flex-direction:column;gap:7px;padding:24px 34px 24px 22px;min-height:220px;justify-content:center;overflow:visible}.t-layer-stack:before{content:"";position:absolute;inset:8px 18px;clip-path:polygon(0 6%,78% 6%,100% 50%,78% 94%,0 94%,22% 50%);background:rgba(50,105,185,.10);border:2px solid rgba(100,156,235,.45);z-index:0}.t-layer-stack:after{content:"3-Tier";position:absolute;left:12px;top:-3px;color:#7898c2;font-size:10px;font-weight:800;letter-spacing:.08em;z-index:1}
+.t-layer-box{position:relative;z-index:2;width:150px;padding:10px;border:1px solid rgba(112,154,221,.5);border-radius:8px;background:rgba(29,84,155,.78);text-align:center;transform:scale(.67);transform-origin:left center;margin-right:-50px}
+.t-layer-box b{display:block;font-size:16px}.t-layer-box span{display:block;color:#a6b9d7;font-size:11px;margin-top:2px}
+.t-big-arrow{position:relative;height:220px;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center}.t-big-arrow:before{content:"";position:absolute;inset:8px 0;clip-path:polygon(0 10%,72% 10%,100% 50%,72% 90%,0 90%,27% 50%);background:linear-gradient(90deg,rgba(66,126,219,.28),rgba(128,102,255,.60));border:1px solid rgba(128,166,225,.55);opacity:.9}.t-big-arrow:after{content:"";position:absolute;left:8%;right:15%;height:2px;background:rgba(174,207,255,.75);box-shadow:0 0 14px rgba(100,165,255,.45)}
+.t-cloud{position:relative;z-index:2;width:225px;min-height:112px;padding:22px 18px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(203,219,255,.62);border-radius:55% 45% 48% 52% / 52% 55% 45% 48%;background:rgba(9,28,62,.95);box-shadow:0 0 20px rgba(76,128,219,.18)}.t-cloud:before,.t-cloud:after{content:"";position:absolute;border:1px solid rgba(203,219,255,.55);background:rgba(9,28,62,.98);border-radius:50%}.t-cloud:before{width:54px;height:54px;left:30px;top:-24px}.t-cloud:after{width:68px;height:68px;right:28px;top:-31px}.t-cloud span{position:relative;z-index:3;color:#c8d6ed;font-size:18px;line-height:1.55}.t-cloud b{color:#fff;font-size:18px}
 .t-software{width:100%;max-width:900px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
 .t-module{padding:27px 12px;border:1px solid #5c82d8;border-radius:12px;background:linear-gradient(145deg,rgba(32,89,163,.58),rgba(70,66,165,.46));text-align:center}
 .t-module strong{display:block;font-size:18px}.t-module small{display:block;color:#a9bddd;font-size:12px;margin-top:5px}
@@ -52,10 +53,10 @@ h3{letter-spacing:-.02em}
 .t-node{width:92px;height:108px;border:2px solid #7897bf;border-radius:6px;background:linear-gradient(90deg,#1a345b,#41668f);position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:9px;font-size:11px;color:#c7d5e9}
 .t-node:before{content:"";position:absolute;left:12px;right:12px;top:14px;height:7px;background:#69b7ff;box-shadow:0 17px #69b7ff,0 34px #69b7ff}
 .t-node-add{width:92px;height:108px;border:2px dashed #6d87ae;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:42px;color:#6f9eff}
-.t-scale-caption{text-align:center;color:#a9c0ff;font-size:14px;font-weight:700;margin-top:18px}
-.t-compare{width:100%;display:grid;grid-template-columns:1fr 54px 1fr;gap:18px;align-items:center}
+.t-scale-caption{text-align:center;color:#a9c0ff;font-size:14px;font-weight:700;margin-top:18px;line-height:1.8}.t-scale-note{text-align:center;color:#91a6c7;font-size:12px;margin-top:5px}
+.t-compare{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr);gap:18px;align-items:stretch}.t-compare-side{min-height:220px;display:flex;flex-direction:column;justify-content:center;text-align:center}
 .t-compare-side{padding:23px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.035)}
-.t-compare-side h4{margin:0 0 14px;font-size:18px}.t-compare-side ul{margin:0;padding-left:19px;color:#aebbd5;font-size:13px;line-height:1.85}
+.t-compare-side h4{margin:0 0 16px;font-size:23px;text-align:center}.t-compare-side ul{margin:0;padding-left:18px;color:#aebbd5;font-size:14px;line-height:1.9;text-align:left}
 .t-compare-side.hci{border-color:rgba(128,102,255,.65);background:rgba(128,102,255,.08)}.t-compare-side.hci h4{color:#c9bcff}
 .t-vs{text-align:center;color:var(--ai);font-size:15px;font-weight:800}
 .t-controls{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid rgba(128,166,225,.55);border-radius:50%;background:rgba(8,24,53,.9);color:#fff;font-size:30px;cursor:pointer;z-index:3}
@@ -65,18 +66,15 @@ h3{letter-spacing:-.02em}
 
 /* core concepts */
 .concepts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
-.concept{min-height:390px;padding:25px 22px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(145deg,rgba(30,55,94,.78),rgba(12,30,61,.78))}
+.concept{min-height:330px;padding:25px 22px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(145deg,rgba(30,55,94,.78),rgba(12,30,61,.78))}
 .concept strong{display:block;color:var(--hci);font-size:20px;margin-bottom:12px}
-.concept .intro-label,.arch-item .intro-label{display:block;color:#b7c3df;font-size:12px;font-weight:800;letter-spacing:.08em;margin:17px 0 6px;padding-top:14px;border-top:1px solid rgba(180,198,235,.16)}
-.concept .summary{display:block;color:#aebbd5;font-size:14px;line-height:1.7}
-.concept .detail{display:block;color:#fff;font-size:13px;line-height:1.8}
+.concept .detail{display:block;color:#fff;font-size:14px;line-height:1.9;margin-top:18px}
 
 /* architecture */
 .arch{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
-.arch-item{min-height:360px;padding:25px 22px;border:1px solid var(--border);border-radius:17px;background:rgba(255,255,255,.035)}
+.arch-item{min-height:310px;padding:25px 22px;border:1px solid var(--border);border-radius:17px;background:rgba(255,255,255,.035)}
 .arch-item h3{margin:0;color:var(--hci);font-size:21px}
-.arch-item .summary{display:block;color:#aebbd5;font-size:14px;line-height:1.7}
-.arch-item .detail{display:block;color:#fff;font-size:13px;line-height:1.8}
+.arch-item .detail{display:block;color:#fff;font-size:14px;line-height:1.9;margin-top:18px}
 
 /* comparison */
 .compare{margin-top:28px;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.025)}
@@ -87,17 +85,22 @@ h3{letter-spacing:-.02em}
 .hci-cell{color:#c9bcff}.trad-cell{color:#c3cee5}
 .cell-title{display:block;color:#fff;font-weight:800;margin-bottom:5px}.cell-copy{display:block;color:#aebbd5;font-size:13px;line-height:1.75}
 
-/* rack comparison */
+/* rack configuration */
 .rack-section{margin-top:24px;padding:28px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.025)}
-.rack-grid{display:grid;grid-template-columns:1fr 90px 1fr;gap:20px;align-items:center}
+.rack-grid{display:grid;grid-template-columns:1fr 70px 1fr;gap:18px;align-items:start;margin-top:22px}
 .rack-card{padding:18px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.025)}
-.rack-card h3{margin:0 0 14px;font-size:18px}.rack-card h3 span{color:#9fb3d4;font-size:12px;font-weight:400;margin-left:6px}
-.rack{width:210px;height:430px;margin:0 auto;border:8px solid #293b5d;border-radius:8px;background:#09162d;padding:10px;display:flex;flex-direction:column;gap:8px;box-shadow:inset 0 0 0 2px #6a7d9d}
-.unit{height:34px;border:2px solid #4f668d;border-radius:3px;background:linear-gradient(90deg,#152a4a,#35547b);display:flex;align-items:center;justify-content:center;color:#cbd8eb;font-size:10px}
-.unit.tall{height:50px}.unit.hci{height:92px;border-color:#8066ff;background:linear-gradient(90deg,#1d2755,#5a4f9b);color:#fff;font-weight:800}
+.rack-card h3{margin:0 0 14px;font-size:18px;text-align:center}.rack-card h3 span{color:#9fb3d4;font-size:12px;font-weight:400;margin-left:6px}
+.rack42{width:255px;height:650px;margin:0 auto;border:7px solid #293b5d;border-radius:8px;background:#071326;padding:8px;display:flex;flex-direction:column;justify-content:flex-start;box-shadow:inset 0 0 0 2px #6a7d9d;overflow:hidden}
+.rack-u{height:14px;flex:0 0 14px;border-bottom:1px solid rgba(150,175,215,.13);position:relative;display:flex;align-items:center;justify-content:center;color:#667da0;font-size:7px}
+.rack-u span{position:absolute;left:-2px;transform:translateX(-100%);padding-right:4px;color:#657da2;font-size:7px}
+.rack-u.eq{border:1px solid #4f668d;border-radius:2px;background:linear-gradient(90deg,#152a4a,#35547b);color:#d8e4f5;font-size:8px;font-weight:700;margin:0 0 1px}
+.rack-u.server{background:linear-gradient(90deg,#19365c,#42698f);border-color:#6588b2}
+.rack-u.storage{background:linear-gradient(90deg,#303d5b,#6b5f86);border-color:#8b7bb0}
+.rack-u.ups{background:linear-gradient(90deg,#3a3f4c,#6d7078);border-color:#9498a2}
+.rack-u.gap{background:rgba(255,255,255,.025)}
 .rack-caption{text-align:center;color:#9fb2d1;font-size:12px;margin-top:12px;line-height:1.6}.rack-caption b{color:#fff}
-.rack-vs{color:var(--ai);font-size:17px;font-weight:800;text-align:center}
-.rack-note{margin-top:16px;color:#9eafd0;font-size:12px;text-align:center}
+.rack-vs{color:var(--ai);font-size:17px;font-weight:800;text-align:center;padding-top:320px}
+.rack-note{margin-top:16px;color:#c5d1e7;font-size:12px;text-align:center;line-height:1.7}.rack-warning{margin-top:12px;padding:12px 14px;border:1px solid rgba(242,184,91,.30);border-radius:10px;color:#f0d7a7;background:rgba(242,184,91,.06);font-size:12px;line-height:1.7}.rack-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px;color:#9fb2d1;font-size:11px}.rack-legend span{padding:5px 8px;border:1px solid rgba(180,198,235,.16);border-radius:999px}
 
 /* considerations */
 .consider-intro{margin-top:25px;padding:24px;border:1px solid rgba(242,184,91,.24);border-radius:16px;background:rgba(242,184,91,.045)}
@@ -126,12 +129,12 @@ h3{letter-spacing:-.02em}
   .header,.page{width:min(100% - 36px,1160px)}.header{height:76px}.nav{gap:15px;font-size:12px}.page{padding-top:55px}.lead{font-size:18px}
   .concepts,.arch{grid-template-columns:1fr}.consider-grid{grid-template-columns:1fr}
   .row{grid-template-columns:90px 1fr 1fr}.row>div{padding:15px 12px;font-size:12px}
-  .transition-viewer{padding:23px 50px}.t-3tier{grid-template-columns:1fr}.t-big-arrow{transform:rotate(90deg)}.t-software{grid-template-columns:1fr}.t-software-label{grid-column:auto}
+  .transition-viewer{padding:23px 50px}.t-3tier{grid-template-columns:1fr}.t-big-arrow{transform:rotate(90deg);margin:20px 0}.t-cloud{transform:rotate(-90deg)}.t-software{grid-template-columns:1fr}.t-software-label{grid-column:auto}
   .t-scale{flex-wrap:wrap}.t-compare{grid-template-columns:1fr}.t-vs{display:none}
-  .rack{width:180px;height:380px}
+  .rack42{width:230px;height:620px}
 }
 @media(max-width:480px){
-  .nav{display:none}h1{font-size:50px}.row{grid-template-columns:1fr}.row>div{border-right:0}.rack{width:160px}
+  .nav{display:none}h1{font-size:50px}.row{grid-template-columns:1fr}.row>div{border-right:0}.rack42{width:205px;height:600px}
 }
 </style>
 </head>
@@ -173,8 +176,7 @@ h3{letter-spacing:-.02em}
               <div class="t-layer-box"><b>Network</b><span>Switch / SAN</span></div>
               <div class="t-layer-box"><b>Storage</b><span>외부 공유 스토리지</span></div>
             </div>
-            <div class="t-big-arrow">→</div>
-            <div style="text-align:center;color:#a5b8d6;font-size:15px;line-height:1.9">각 계층을<br><strong style="color:#fff;font-size:18px">별도로 설계 · 운영</strong><br>해야 하는 구조</div>
+            <div class="t-big-arrow"><div class="t-cloud"><span>각 계층을<br><b>별도로 설계 · 운영</b><br>해야 하는 구조</span></div></div>
           </div>
         </div>
       </article>
@@ -194,7 +196,7 @@ h3{letter-spacing:-.02em}
       <article class="t-stage" data-stage="3">
         <div class="t-stage-title"><span class="t-num">03</span><h3>노드 추가로 수평 확장</h3><span>Scale-Out Architecture</span></div>
         <div class="t-content">
-          <div><div class="t-scale"><div class="t-node">NODE 01</div><div class="t-node">NODE 02</div><div class="t-node">NODE 03</div><div class="t-node-add">+</div></div><div class="t-scale-caption">노드가 추가되면 Compute + Storage 자원이 함께 증가</div></div>
+          <div><div class="t-scale"><div class="t-node">NODE 01</div><div class="t-node">NODE 02</div><div class="t-node">NODE 03</div><div class="t-node-add">+</div></div><div class="t-scale-caption">노드가 추가되면 Compute + Storage 자원이 함께 증가<br><strong>이상적인 조건에서는 성능도 노드 수에 비례해 선형적으로 증가</strong></div><div class="t-scale-note">※ 실제 성능 증가는 네트워크 대역폭, 워크로드 특성, 스토리지 구성 등에 따라 달라질 수 있습니다.</div></div>
         </div>
       </article>
 
@@ -216,52 +218,24 @@ h3{letter-spacing:-.02em}
 <section class="section">
   <div class="label">CORE CONCEPTS</div>
   <h2>HCI를 이해하는 네 가지 핵심 개념</h2>
-  <p class="section-copy">HCI의 구조를 이해할 때 자주 사용하는 네 가지 개념을 개념 소개와 VMware 관점의 세부 설명으로 나누어 봅니다.</p>
+  <p class="section-copy">HCI의 핵심은 기존 인프라의 분리된 기능을 하나의 클러스터와 소프트웨어 중심 구조로 통합하고, 분산과 수평 확장을 통해 운영하는 데 있습니다.</p>
   <div class="concepts">
-    <article class="concept">
-      <strong>Converged</strong>
-      <span class="intro-label">개념소개</span><span class="summary">Compute + Storage + Network를 하나의 플랫폼으로 통합</span>
-      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">VMware Cloud Foundation(VCF)은 vSphere 기반의 Compute 가상화에 vSAN Storage와 NSX Network를 결합해 하나의 Software-Defined 데이터센터 스택으로 운영하는 방향을 취합니다. 즉 서버·스토리지·네트워크를 물리적으로 하나의 장비로 만드는 것이 아니라, 각 자원을 소프트웨어 계층에서 추상화하고 공통 관리 체계로 연결하는 것이 핵심입니다.</span>
-    </article>
-    <article class="concept">
-      <strong>Software-Defined</strong>
-      <span class="intro-label">개념소개</span><span class="summary">하드웨어와 기능을 소프트웨어 계층에서 추상화하고 자동화</span>
-      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">VMware는 vSphere, vSAN, NSX와 VCF Operations/Automation을 통해 Compute·Storage·Network·Management 기능을 소프트웨어로 정의하고 정책 기반으로 운영합니다. 하드웨어의 개별 설정에 의존하기보다 가상화와 정책, API 및 통합 관리 계층을 활용해 반복 작업을 표준화하는 것이 Software-Defined 접근의 핵심입니다.</span>
-    </article>
-    <article class="concept">
-      <strong>Distributed</strong>
-      <span class="intro-label">개념소개</span><span class="summary">데이터와 서비스를 여러 노드에 분산하여 구성</span>
-      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">vSAN은 여러 ESXi 호스트의 로컬 디스크를 클러스터 차원의 공유 데이터스토어로 묶는 분산 스토리지 구조를 제공합니다. VM과 데이터 서비스는 클러스터 정책에 따라 여러 호스트의 자원을 활용하며, 네트워크와 관리 기능 역시 클러스터 전체를 대상으로 동작하도록 설계할 수 있습니다.</span>
-    </article>
-    <article class="concept">
-      <strong>Scale-Out</strong>
-      <span class="intro-label">개념소개</span><span class="summary">노드를 추가하면서 성능과 용량을 함께 확장</span>
-      <span class="intro-label">세부 설명 · VMware 관점</span><span class="detail">HCI에서는 단일 대형 서버를 교체하는 방식보다 클러스터에 노드를 추가해 자원을 확장하는 방식이 중요합니다. VMware HCI/VCF 환경에서도 클러스터 단위로 CPU·Memory와 분산 스토리지 자원을 확장하며, 실제 설계에서는 최소 구성, 장애 여유 용량, 네트워크 대역폭, 워크로드 증가량을 함께 검토해야 합니다.</span>
-    </article>
+    <article class="concept"><strong>Converged</strong><span class="detail">기존 3-Tier에서는 컴퓨트(서버), 저장장치(스토리지), 그리고 네트워크(네트워크 장비)가 각각 분리되어 구성되고 별도로 관리되어야 합니다. HCI는 하나의 클러스터 안에서 이 세 가지 기능이 통합되도록 설계하여, 고객은 통합된 관리 환경에서 인프라를 운영하고 계층별 관리 복잡도를 줄이면서 장애 대응과 안정성을 함께 고려할 수 있습니다.</span></article>
+    <article class="concept"><strong>Software-Defined</strong><span class="detail">기존 인프라는 물리 장비의 설정과 구성에 따라 기능이 결정되는 경우가 많지만, HCI는 컴퓨트·스토리지·네트워크의 기능을 소프트웨어 계층에서 정의하고 관리합니다. 정책과 자동화 기능을 통해 반복적인 설정을 표준화하고, 하드웨어 구성의 차이에 따른 운영 복잡도를 줄이면서 하나의 플랫폼처럼 관리할 수 있도록 합니다.</span></article>
+    <article class="concept"><strong>Distributed</strong><span class="detail">HCI는 하나의 장비에 모든 자원을 집중하는 방식이 아니라 여러 노드에 컴퓨트와 데이터를 분산하여 하나의 클러스터로 운영합니다. 데이터와 서비스가 여러 노드에 분산되도록 구성하고 데이터 보호 정책을 적용함으로써 특정 노드나 디스크에 장애가 발생하더라도 서비스의 연속성과 데이터 안정성을 확보할 수 있도록 설계합니다.</span></article>
+    <article class="concept"><strong>Scale-Out</strong><span class="detail">HCI는 기존처럼 서버·스토리지·네트워크를 각각 증설하기보다 필요한 시점에 노드를 추가하는 방식으로 클러스터를 확장합니다. 노드가 추가되면 컴퓨트와 스토리지 자원이 함께 증가하고, 이상적인 조건에서는 성능도 노드 수에 비례해 선형적으로 증가하도록 설계할 수 있어 업무량 증가에 맞춰 단계적으로 확장하기에 적합합니다.</span></article>
   </div>
 </section>
 
 <section class="section">
   <div class="label">ARCHITECTURE</div>
   <h2>HCI Architecture</h2>
-  <p class="section-copy">HCI는 단순히 서버를 묶는 것이 아니라 Compute, Storage, Network, Management가 소프트웨어 계층에서 연결되는 구조입니다.</p>
+  <p class="section-copy">HCI를 구성하는 네 가지 영역은 하나의 클러스터 안에서 서로 연결되어 동작합니다.</p>
   <div class="arch">
-    <article class="arch-item">
-      <h3>Compute</h3><span class="intro-label">개념</span><span class="summary">가상머신과 애플리케이션을 실행하는 CPU·Memory 계층</span>
-      <span class="intro-label">상세한 역할</span><span class="detail">하이퍼바이저가 물리 CPU와 Memory를 가상화해 VM에 할당합니다. 클러스터에서는 HA, DRS와 같은 기능을 통해 워크로드 배치와 장애 대응을 지원하며, HCI에서는 Compute 자원이 Storage와 동일한 노드 자원 풀의 일부로 사용됩니다.</span>
-    </article>
-    <article class="arch-item">
-      <h3>Storage</h3><span class="intro-label">개념</span><span class="summary">노드 내부 디스크를 활용해 분산 스토리지를 구성</span>
-      <span class="intro-label">상세한 역할</span><span class="detail">HCI의 Storage 계층은 각 노드의 SSD/NVMe/HDD를 클러스터 단위의 논리적 데이터스토어로 구성합니다. VMware vSAN 관점에서는 정책 기반으로 데이터 보호와 성능 요구를 정의하고 여러 호스트의 디스크 자원을 활용합니다.</span>
-    </article>
-    <article class="arch-item">
-      <h3>Network</h3><span class="intro-label">개념</span><span class="summary">노드 간 통신과 VM·스토리지 트래픽을 연결</span>
-      <span class="intro-label">상세한 역할</span><span class="detail">HCI에서는 VM 트래픽뿐 아니라 관리, 스토리지, 클러스터 통신이 모두 네트워크 품질에 영향을 받습니다. VMware 환경에서는 vSphere Distributed Switch와 NSX를 활용해 가상 스위칭, 오버레이, 정책 및 보안 기능을 소프트웨어 계층에서 구성할 수 있습니다.</span>
-    </article>
-    <article class="arch-item">
-      <h3>Management</h3><span class="intro-label">개념</span><span class="summary">가상화·스토리지·정책·모니터링을 통합 관리</span>
-      <span class="intro-label">상세한 역할</span><span class="detail">관리 계층은 개별 장비 설정을 넘어 클러스터 전체의 구성, 수명주기, 모니터링과 정책을 다룹니다. VCF에서는 SDDC Manager와 VCF Operations/Automation 계층을 통해 배포·수명주기·운영 가시성을 통합하는 방향을 취합니다.</span>
-    </article>
+    <article class="arch-item"><h3>Compute</h3><span class="detail">하이퍼바이저와 VM의 연산(Compute)을 담당하는 부분으로 주로 서버가 역할을 맡게 됩니다. 서버의 CPU와 메모리를 가상화해 VM에 할당하고 관리하며, 여러 노드의 연산 자원을 클러스터 단위로 묶어 필요한 워크로드에 사용할 수 있도록 합니다.</span></article>
+    <article class="arch-item"><h3>Storage</h3><span class="detail">VM과 애플리케이션의 데이터를 저장하는 부분으로, HCI에서는 각 서버 노드에 장착된 SSD·NVMe·HDD 등의 로컬 디스크를 소프트웨어로 통합해 하나의 분산 스토리지 자원으로 구성합니다. 데이터 보호와 성능 정책을 적용하고 여러 노드에 데이터를 분산하여 장애에 대응합니다.</span></article>
+    <article class="arch-item"><h3>Network</h3><span class="detail">서버와 VM, 스토리지, 관리 시스템 사이의 통신을 담당하는 부분입니다. VM 서비스 트래픽뿐 아니라 노드 간 스토리지 통신과 관리·클러스터 트래픽까지 안정적으로 전달해야 하며, 네트워크 대역폭과 이중화를 고려해 HCI 클러스터가 안정적으로 동작하도록 구성합니다.</span></article>
+    <article class="arch-item"><h3>Management</h3><span class="detail">Compute·Storage·Network와 클러스터 전체를 하나의 환경에서 관리하는 부분입니다. VM 배치, 자원 상태, 스토리지 정책, 장애 상태, 성능 모니터링과 같은 운영 기능을 통합해 관리하고, 반복적인 설정과 운영 작업을 정책과 자동화 기능으로 표준화합니다.</span></article>
   </div>
 </section>
 
@@ -279,31 +253,25 @@ h3{letter-spacing:-.02em}
   </div>
 
   <div class="rack-section">
-    <div class="label">RACK FOOTPRINT</div>
-    <h3 style="margin:0 0 6px;font-size:21px">동일한 렉 공간에서 보는 구성 차이</h3>
-    <p class="section-copy">아래는 이해를 위한 예시 구성입니다. 실제 랙 유닛은 장비 모델과 네트워크·전원 구성에 따라 달라집니다.</p>
+    <div class="label">RACK CONFIGURATION</div>
+    <h3 style="margin:0 0 6px;font-size:21px">Rack Configuration Diagram</h3>
+    <p class="section-copy">렉 구성 예시</p>
     <div class="rack-grid">
       <div class="rack-card">
-        <h3>Traditional 3-Tier <span>예시</span></h3>
-        <div class="rack" aria-label="3-Tier rack diagram">
-          <div class="unit">TOR Switch</div><div class="unit">Network Switch</div><div class="unit">L4</div><div class="unit">Web Firewall</div>
-          <div class="unit">Server 01</div><div class="unit">Server 02</div><div class="unit">Server 03</div><div class="unit">Server 04</div><div class="unit">Server 05</div><div class="unit">Server 06</div><div class="unit">Server 07</div><div class="unit">Server 08</div><div class="unit">Server 09</div>
-          <div class="unit tall">Storage 4U × 3</div><div class="unit">Console / KVM</div>
-        </div>
-        <div class="rack-caption"><b>여러 계층의 장비가 각각 공간을 차지</b><br>서버 9대 + 외장 스토리지 + 네트워크/보안 장비</div>
+        <h3>Traditional 3-Tier <span>42U</span></h3>
+        <div class="rack42" aria-label="42U 3-Tier rack diagram"><div class="rack-u eq"><span>42</span>TOR 1U</div><div class="rack-u eq"><span>41</span>Network SW (L2/L3) 1U</div><div class="rack-u eq"><span>40</span>L4 2U</div><div class="rack-u eq"><span>39</span></div><div class="rack-u eq"><span>38</span>Console 1U</div><div class="rack-u gap"><span>37</span>1U SPACE / REMAIN</div><div class="rack-u server"><span>36</span>Server 01 · 2U</div><div class="rack-u server"><span>35</span></div><div class="rack-u server"><span>34</span>Server 02 · 2U</div><div class="rack-u server"><span>33</span></div><div class="rack-u server"><span>32</span>Server 03 · 2U</div><div class="rack-u server"><span>31</span></div><div class="rack-u server"><span>30</span>Server 04 · 2U</div><div class="rack-u server"><span>29</span></div><div class="rack-u server"><span>28</span>Server 05 · 2U</div><div class="rack-u server"><span>27</span></div><div class="rack-u server"><span>26</span>Server 06 · 2U</div><div class="rack-u server"><span>25</span></div><div class="rack-u server"><span>24</span>Server 07 · 2U</div><div class="rack-u server"><span>23</span></div><div class="rack-u server"><span>22</span>Server 08 · 2U</div><div class="rack-u server"><span>21</span></div><div class="rack-u server"><span>20</span>Server 09 · 2U</div><div class="rack-u server"><span>19</span></div><div class="rack-u storage"><span>18</span>Storage 01 · 4U</div><div class="rack-u storage"><span>17</span></div><div class="rack-u storage"><span>16</span></div><div class="rack-u storage"><span>15</span></div><div class="rack-u storage"><span>14</span>Storage 02 · 4U</div><div class="rack-u storage"><span>13</span></div><div class="rack-u storage"><span>12</span></div><div class="rack-u storage"><span>11</span></div><div class="rack-u storage"><span>10</span>Storage 03 · 4U</div><div class="rack-u storage"><span>9</span></div><div class="rack-u storage"><span>8</span></div><div class="rack-u storage"><span>7</span></div><div class="rack-u ups"><span>6</span>UPS · 6U</div><div class="rack-u ups"><span>5</span></div><div class="rack-u ups"><span>4</span></div><div class="rack-u ups"><span>3</span></div><div class="rack-u ups"><span>2</span></div><div class="rack-u ups"><span>1</span></div></div>
+        <div class="rack-caption"><b>장비 41U + 잔여 1U</b><br>장비 사이 간격은 두지 않고, 남는 1U는 TOR와 서버 사이에 배치했습니다.</div>
+        <div class="rack-warning">3-Tier는 요청하신 장비의 총 용량이 41U입니다. 각 서버·스토리지·네트워크 장비 사이의 공간은 두지 않고, 남는 1U는 <b>TOR와 서버 사이</b>에 배치했습니다.</div>
       </div>
       <div class="rack-vs">VS</div>
       <div class="rack-card">
-        <h3>HCI <span>예시</span></h3>
-        <div class="rack" aria-label="HCI rack diagram">
-          <div class="unit">TOR Switch</div><div class="unit">Network / Security</div>
-          <div class="unit hci">HCI Node 01</div><div class="unit hci">HCI Node 02</div><div class="unit hci">HCI Node 03</div>
-          <div class="unit" style="opacity:.35">Reserved / Expansion</div>
-        </div>
-        <div class="rack-caption"><b>노드 내부에 Compute + Storage가 통합</b><br>외장 스토리지와 다수의 서버 장비를 별도 배치하지 않는 구조</div>
+        <h3>HCI <span>42U</span></h3>
+        <div class="rack42" aria-label="42U HCI rack diagram"><div class="rack-u eq"><span>42</span>TOR 1U</div><div class="rack-u gap"><span>41</span>1U SPACE</div><div class="rack-u gap"><span>40</span>1U SPACE</div><div class="rack-u gap"><span>39</span>1U SPACE</div><div class="rack-u gap"><span>38</span>1U SPACE</div><div class="rack-u gap"><span>37</span>1U SPACE</div><div class="rack-u gap"><span>36</span>1U SPACE</div><div class="rack-u gap"><span>35</span>1U SPACE</div><div class="rack-u gap"><span>34</span>1U SPACE</div><div class="rack-u gap"><span>33</span>1U SPACE</div><div class="rack-u gap"><span>32</span>1U SPACE</div><div class="rack-u gap"><span>31</span>1U SPACE</div><div class="rack-u gap"><span>30</span>1U SPACE</div><div class="rack-u gap"><span>29</span>1U SPACE</div><div class="rack-u gap"><span>28</span>1U SPACE</div><div class="rack-u gap"><span>27</span>1U SPACE</div><div class="rack-u gap"><span>26</span>1U SPACE</div><div class="rack-u gap"><span>25</span>1U SPACE</div><div class="rack-u gap"><span>24</span>1U SPACE</div><div class="rack-u gap"><span>23</span>1U SPACE</div><div class="rack-u gap"><span>22</span>1U SPACE</div><div class="rack-u gap"><span>21</span>1U SPACE</div><div class="rack-u gap"><span>20</span>1U SPACE</div><div class="rack-u gap"><span>19</span>1U SPACE</div><div class="rack-u gap"><span>18</span>1U SPACE</div><div class="rack-u gap"><span>17</span>1U SPACE</div><div class="rack-u gap"><span>16</span>1U SPACE</div><div class="rack-u server"><span>15</span>HCI Node 01 · 2U</div><div class="rack-u server"><span>14</span></div><div class="rack-u server"><span>13</span>HCI Node 02 · 2U</div><div class="rack-u server"><span>12</span></div><div class="rack-u server"><span>11</span>HCI Node 03 · 2U</div><div class="rack-u server"><span>10</span></div><div class="rack-u server"><span>9</span>HCI Node 04 · 2U</div><div class="rack-u server"><span>8</span></div><div class="rack-u server"><span>7</span>HCI Node 05 · 2U</div><div class="rack-u server"><span>6</span></div><div class="rack-u ups"><span>5</span>UPS · 6U</div><div class="rack-u ups"><span>4</span></div><div class="rack-u ups"><span>3</span></div><div class="rack-u ups"><span>2</span></div><div class="rack-u ups"><span>1</span></div></div>
+        <div class="rack-caption"><b>17U 사용 + 25U 여유</b><br>TOR 1U + HCI Node 5대(10U) + UPS 6U</div>
       </div>
     </div>
-    <div class="rack-note">※ 위 그림은 구조적 차이를 설명하기 위한 개념도이며 실제 랙 U, 장비 크기, 네트워크 장비 수량은 구축 설계에 따라 달라집니다.</div>
+    <div class="rack-note">요청하신 장비 규격을 기준으로 한 42U 랙 구성 예시입니다. 장비 간 공간은 두지 않고, UPS를 제외한 잔여 공간은 TOR와 서버 사이에 배치했습니다.</div>
+    <div class="rack-legend"><span>파란색 · Server / HCI Node</span><span>보라색 · Storage</span><span>회색 · UPS</span><span>빈 공간 · 1U 간격 / 확장 여유</span></div>
   </div>
 </section>
 
