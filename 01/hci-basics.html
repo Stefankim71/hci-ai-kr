@@ -86,21 +86,21 @@ h3{letter-spacing:-.02em}
 .cell-title{display:block;color:#fff;font-weight:800;margin-bottom:5px}.cell-copy{display:block;color:#aebbd5;font-size:13px;line-height:1.75}
 
 /* rack configuration */
+
 .rack-section{margin-top:24px;padding:28px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.025)}
-.rack-grid{display:grid;grid-template-columns:1fr 70px 1fr;gap:18px;align-items:start;margin-top:22px}
-.rack-card{padding:18px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.025)}
-.rack-card h3{margin:0 0 14px;font-size:18px;text-align:center}.rack-card h3 span{color:#9fb3d4;font-size:12px;font-weight:400;margin-left:6px}
-.rack42{width:255px;height:650px;margin:0 auto;border:7px solid #293b5d;border-radius:8px;background:#071326;padding:8px;display:flex;flex-direction:column;justify-content:flex-start;box-shadow:inset 0 0 0 2px #6a7d9d;overflow:hidden}
-.rack-u{height:14px;flex:0 0 14px;border-bottom:1px solid rgba(150,175,215,.13);position:relative;display:flex;align-items:center;justify-content:center;color:#667da0;font-size:7px}
-.rack-u span{position:absolute;left:-2px;transform:translateX(-100%);padding-right:4px;color:#657da2;font-size:7px}
-.rack-u.eq{border:1px solid #4f668d;border-radius:2px;background:linear-gradient(90deg,#152a4a,#35547b);color:#d8e4f5;font-size:8px;font-weight:700;margin:0 0 1px}
-.rack-u.server{background:linear-gradient(90deg,#19365c,#42698f);border-color:#6588b2}
-.rack-u.storage{background:linear-gradient(90deg,#303d5b,#6b5f86);border-color:#8b7bb0}
-.rack-u.ups{background:linear-gradient(90deg,#3a3f4c,#6d7078);border-color:#9498a2}
-.rack-u.gap{background:rgba(255,255,255,.025)}
-.rack-caption{text-align:center;color:#9fb2d1;font-size:12px;margin-top:12px;line-height:1.6}.rack-caption b{color:#fff}
-.rack-vs{color:var(--ai);font-size:17px;font-weight:800;text-align:center;padding-top:320px}
-.rack-note{margin-top:16px;color:#c5d1e7;font-size:12px;text-align:center;line-height:1.7}.rack-warning{margin-top:12px;padding:12px 14px;border:1px solid rgba(242,184,91,.30);border-radius:10px;color:#f0d7a7;background:rgba(242,184,91,.06);font-size:12px;line-height:1.7}.rack-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px;color:#9fb2d1;font-size:11px}.rack-legend span{padding:5px 8px;border:1px solid rgba(180,198,235,.16);border-radius:999px}
+.rack-grid{display:grid;grid-template-columns:1fr 70px 1fr;gap:18px;align-items:center;margin-top:22px}
+.rack-card{padding:20px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.025)}
+.rack-card h3{margin:0 0 16px;font-size:19px;text-align:center}.rack-card h3 span{color:#9fb3d4;font-size:12px;font-weight:400;margin-left:6px}
+.rack-visual{width:100%;max-width:330px;height:auto;margin:0 auto;display:block}
+.rack-vs{color:var(--ai);font-size:18px;font-weight:800;text-align:center}
+.rack-caption{text-align:center;color:#aebbd5;font-size:13px;margin-top:14px;line-height:1.7}.rack-caption b{color:#fff}
+.rack-note{margin-top:18px;color:#c5d1e7;font-size:12px;text-align:center;line-height:1.7}
+.rack-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px;color:#9fb2d1;font-size:11px}
+.rack-legend span{padding:5px 9px;border:1px solid rgba(180,198,235,.16);border-radius:999px}
+.rack-explain{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rack-explain div{padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.025)}
+.rack-explain strong{display:block;font-size:13px;margin-bottom:5px;color:#fff}
+.rack-explain span{font-size:12px;color:#aebbd5;line-height:1.6}
 
 /* considerations */
 .consider-intro{margin-top:25px;padding:24px;border:1px solid rgba(242,184,91,.24);border-radius:16px;background:rgba(242,184,91,.045)}
@@ -256,24 +256,156 @@ h3{letter-spacing:-.02em}
     <div class="label">RACK CONFIGURATION</div>
     <h3 style="margin:0 0 6px;font-size:21px">Rack Configuration Diagram</h3>
     <p class="section-copy">렉 구성 예시</p>
+
     <div class="rack-grid">
       <div class="rack-card">
         <h3>Traditional 3-Tier <span>42U</span></h3>
-        <div class="rack42" aria-label="42U 3-Tier rack diagram"><div class="rack-u eq"><span>42</span>TOR 1U</div><div class="rack-u eq"><span>41</span>Network SW (L2/L3) 1U</div><div class="rack-u eq"><span>40</span>L4 2U</div><div class="rack-u eq"><span>39</span></div><div class="rack-u eq"><span>38</span>Console 1U</div><div class="rack-u gap"><span>37</span>1U SPACE / REMAIN</div><div class="rack-u server"><span>36</span>Server 01 · 2U</div><div class="rack-u server"><span>35</span></div><div class="rack-u server"><span>34</span>Server 02 · 2U</div><div class="rack-u server"><span>33</span></div><div class="rack-u server"><span>32</span>Server 03 · 2U</div><div class="rack-u server"><span>31</span></div><div class="rack-u server"><span>30</span>Server 04 · 2U</div><div class="rack-u server"><span>29</span></div><div class="rack-u server"><span>28</span>Server 05 · 2U</div><div class="rack-u server"><span>27</span></div><div class="rack-u server"><span>26</span>Server 06 · 2U</div><div class="rack-u server"><span>25</span></div><div class="rack-u server"><span>24</span>Server 07 · 2U</div><div class="rack-u server"><span>23</span></div><div class="rack-u server"><span>22</span>Server 08 · 2U</div><div class="rack-u server"><span>21</span></div><div class="rack-u server"><span>20</span>Server 09 · 2U</div><div class="rack-u server"><span>19</span></div><div class="rack-u storage"><span>18</span>Storage 01 · 4U</div><div class="rack-u storage"><span>17</span></div><div class="rack-u storage"><span>16</span></div><div class="rack-u storage"><span>15</span></div><div class="rack-u storage"><span>14</span>Storage 02 · 4U</div><div class="rack-u storage"><span>13</span></div><div class="rack-u storage"><span>12</span></div><div class="rack-u storage"><span>11</span></div><div class="rack-u storage"><span>10</span>Storage 03 · 4U</div><div class="rack-u storage"><span>9</span></div><div class="rack-u storage"><span>8</span></div><div class="rack-u storage"><span>7</span></div><div class="rack-u ups"><span>6</span>UPS · 6U</div><div class="rack-u ups"><span>5</span></div><div class="rack-u ups"><span>4</span></div><div class="rack-u ups"><span>3</span></div><div class="rack-u ups"><span>2</span></div><div class="rack-u ups"><span>1</span></div></div>
-        <div class="rack-caption"><b>장비 41U + 잔여 1U</b><br>장비 사이 간격은 두지 않고, 남는 1U는 TOR와 서버 사이에 배치했습니다.</div>
-        <div class="rack-warning">3-Tier는 요청하신 장비의 총 용량이 41U입니다. 각 서버·스토리지·네트워크 장비 사이의 공간은 두지 않고, 남는 1U는 <b>TOR와 서버 사이</b>에 배치했습니다.</div>
+
+        <svg class="rack-visual" viewBox="0 0 330 560" role="img" aria-label="42U Traditional 3-Tier 랙 구성">
+          <defs>
+            <linearGradient id="rackFrameA" x1="0" x2="1">
+              <stop offset="0" stop-color="#172943"/>
+              <stop offset="0.5" stop-color="#30496b"/>
+              <stop offset="1" stop-color="#172943"/>
+            </linearGradient>
+            <linearGradient id="networkA" x1="0" x2="1">
+              <stop offset="0" stop-color="#183d69"/><stop offset="1" stop-color="#4678a7"/>
+            </linearGradient>
+            <linearGradient id="serverA" x1="0" x2="1">
+              <stop offset="0" stop-color="#18375e"/><stop offset="1" stop-color="#3f6d97"/>
+            </linearGradient>
+            <linearGradient id="storageA" x1="0" x2="1">
+              <stop offset="0" stop-color="#343555"/><stop offset="1" stop-color="#71619a"/>
+            </linearGradient>
+            <linearGradient id="upsA" x1="0" x2="1">
+              <stop offset="0" stop-color="#3b404c"/><stop offset="1" stop-color="#727781"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 42U rack -->
+          <rect x="55" y="12" width="220" height="536" rx="8" fill="#061224" stroke="url(#rackFrameA)" stroke-width="8"/>
+          <rect x="69" y="25" width="192" height="510" rx="3" fill="#09182c" stroke="#5c7192" stroke-width="2"/>
+
+          <!-- Network: 5U -->
+          <rect x="76" y="32" width="178" height="60" rx="4" fill="url(#networkA)" stroke="#6e9bc2"/>
+          <text x="165" y="58" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">NETWORK</text>
+          <text x="165" y="78" text-anchor="middle" fill="#d3e2f3" font-size="11">TOR · L2/L3 · L4 · Console · 5U</text>
+          <g fill="#9fe8ff">
+            <circle cx="91" cy="43" r="2"/><circle cx="100" cy="43" r="2"/><circle cx="109" cy="43" r="2"/><circle cx="118" cy="43" r="2"/>
+            <circle cx="91" cy="84" r="2"/><circle cx="100" cy="84" r="2"/><circle cx="109" cy="84" r="2"/><circle cx="118" cy="84" r="2"/>
+          </g>
+
+          <!-- Servers: 18U -->
+          <rect x="76" y="96" width="178" height="226" rx="4" fill="url(#serverA)" stroke="#6e94b8"/>
+          <text x="165" y="120" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">SERVER</text>
+          <text x="165" y="139" text-anchor="middle" fill="#d3e2f3" font-size="11">9대 × 2U = 18U</text>
+          <g stroke="#8eb1d1" stroke-width="1" fill="none">
+            <rect x="88" y="151" width="154" height="17" rx="2"/><rect x="88" y="173" width="154" height="17" rx="2"/>
+            <rect x="88" y="195" width="154" height="17" rx="2"/><rect x="88" y="217" width="154" height="17" rx="2"/>
+            <rect x="88" y="239" width="154" height="17" rx="2"/><rect x="88" y="261" width="154" height="17" rx="2"/>
+            <rect x="88" y="283" width="154" height="17" rx="2"/><rect x="88" y="305" width="154" height="10" rx="2"/>
+          </g>
+          <g fill="#b7ff00">
+            <circle cx="99" cy="159" r="2"/><circle cx="99" cy="181" r="2"/><circle cx="99" cy="203" r="2"/>
+            <circle cx="99" cy="225" r="2"/><circle cx="99" cy="247" r="2"/><circle cx="99" cy="269" r="2"/>
+            <circle cx="99" cy="291" r="2"/><circle cx="99" cy="310" r="2"/>
+          </g>
+
+          <!-- Storage: 12U -->
+          <rect x="76" y="326" width="178" height="151" rx="4" fill="url(#storageA)" stroke="#9b8bc1"/>
+          <text x="165" y="350" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">STORAGE</text>
+          <text x="165" y="369" text-anchor="middle" fill="#ddd6ef" font-size="11">3대 × 4U = 12U</text>
+          <g stroke="#aaa0c9" stroke-width="1" fill="#262b48">
+            <rect x="88" y="381" width="154" height="26" rx="3"/><rect x="88" y="412" width="154" height="26" rx="3"/><rect x="88" y="443" width="154" height="26" rx="3"/>
+          </g>
+          <g fill="#6fa8ff">
+            <circle cx="100" cy="394" r="2"/><circle cx="112" cy="394" r="2"/><circle cx="100" cy="425" r="2"/><circle cx="112" cy="425" r="2"/><circle cx="100" cy="456" r="2"/><circle cx="112" cy="456" r="2"/>
+          </g>
+
+          <!-- UPS: 6U -->
+          <rect x="76" y="481" width="178" height="54" rx="4" fill="url(#upsA)" stroke="#9ba1aa"/>
+          <text x="165" y="505" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">UPS</text>
+          <text x="165" y="523" text-anchor="middle" fill="#e1e3e7" font-size="11">6U</text>
+
+          <!-- 42U marker -->
+          <line x1="35" y1="32" x2="35" y2="535" stroke="#7f93b3" stroke-width="1.5"/>
+          <path d="M30 32h10M30 535h10" stroke="#7f93b3" stroke-width="1.5"/>
+          <text x="21" y="292" transform="rotate(-90 21 292)" text-anchor="middle" fill="#aebbd5" font-size="12" font-weight="700">42U RACK</text>
+        </svg>
+
+        <div class="rack-caption"><b>상면을 거의 모두 사용하는 구성</b><br>Network 5U + Server 18U + Storage 12U + UPS 6U = <b>41U</b></div>
       </div>
+
       <div class="rack-vs">VS</div>
+
       <div class="rack-card">
         <h3>HCI <span>42U</span></h3>
-        <div class="rack42" aria-label="42U HCI rack diagram"><div class="rack-u eq"><span>42</span>TOR 1U</div><div class="rack-u gap"><span>41</span>1U SPACE</div><div class="rack-u gap"><span>40</span>1U SPACE</div><div class="rack-u gap"><span>39</span>1U SPACE</div><div class="rack-u gap"><span>38</span>1U SPACE</div><div class="rack-u gap"><span>37</span>1U SPACE</div><div class="rack-u gap"><span>36</span>1U SPACE</div><div class="rack-u gap"><span>35</span>1U SPACE</div><div class="rack-u gap"><span>34</span>1U SPACE</div><div class="rack-u gap"><span>33</span>1U SPACE</div><div class="rack-u gap"><span>32</span>1U SPACE</div><div class="rack-u gap"><span>31</span>1U SPACE</div><div class="rack-u gap"><span>30</span>1U SPACE</div><div class="rack-u gap"><span>29</span>1U SPACE</div><div class="rack-u gap"><span>28</span>1U SPACE</div><div class="rack-u gap"><span>27</span>1U SPACE</div><div class="rack-u gap"><span>26</span>1U SPACE</div><div class="rack-u gap"><span>25</span>1U SPACE</div><div class="rack-u gap"><span>24</span>1U SPACE</div><div class="rack-u gap"><span>23</span>1U SPACE</div><div class="rack-u gap"><span>22</span>1U SPACE</div><div class="rack-u gap"><span>21</span>1U SPACE</div><div class="rack-u gap"><span>20</span>1U SPACE</div><div class="rack-u gap"><span>19</span>1U SPACE</div><div class="rack-u gap"><span>18</span>1U SPACE</div><div class="rack-u gap"><span>17</span>1U SPACE</div><div class="rack-u gap"><span>16</span>1U SPACE</div><div class="rack-u server"><span>15</span>HCI Node 01 · 2U</div><div class="rack-u server"><span>14</span></div><div class="rack-u server"><span>13</span>HCI Node 02 · 2U</div><div class="rack-u server"><span>12</span></div><div class="rack-u server"><span>11</span>HCI Node 03 · 2U</div><div class="rack-u server"><span>10</span></div><div class="rack-u server"><span>9</span>HCI Node 04 · 2U</div><div class="rack-u server"><span>8</span></div><div class="rack-u server"><span>7</span>HCI Node 05 · 2U</div><div class="rack-u server"><span>6</span></div><div class="rack-u ups"><span>5</span>UPS · 6U</div><div class="rack-u ups"><span>4</span></div><div class="rack-u ups"><span>3</span></div><div class="rack-u ups"><span>2</span></div><div class="rack-u ups"><span>1</span></div></div>
-        <div class="rack-caption"><b>17U 사용 + 25U 여유</b><br>TOR 1U + HCI Node 5대(10U) + UPS 6U</div>
+
+        <svg class="rack-visual" viewBox="0 0 330 560" role="img" aria-label="42U HCI 5노드 랙 구성과 25U 여유 공간">
+          <defs>
+            <linearGradient id="rackFrameB" x1="0" x2="1">
+              <stop offset="0" stop-color="#172943"/>
+              <stop offset="0.5" stop-color="#30496b"/>
+              <stop offset="1" stop-color="#172943"/>
+            </linearGradient>
+            <linearGradient id="nodeB" x1="0" x2="1">
+              <stop offset="0" stop-color="#253d66"/><stop offset="1" stop-color="#597ca1"/>
+            </linearGradient>
+            <linearGradient id="upsB" x1="0" x2="1">
+              <stop offset="0" stop-color="#3b404c"/><stop offset="1" stop-color="#727781"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="55" y="12" width="220" height="536" rx="8" fill="#061224" stroke="url(#rackFrameB)" stroke-width="8"/>
+          <rect x="69" y="25" width="192" height="510" rx="3" fill="#09182c" stroke="#5c7192" stroke-width="2"/>
+
+          <!-- TOR -->
+          <rect x="76" y="32" width="178" height="27" rx="4" fill="#183d69" stroke="#6e9bc2"/>
+          <text x="165" y="50" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">TOR · 1U</text>
+
+          <!-- Empty 25U -->
+          <rect x="76" y="63" width="178" height="304" rx="4" fill="rgba(128,102,255,.055)" stroke="#8066ff" stroke-width="1.5" stroke-dasharray="6 5"/>
+          <text x="165" y="188" text-anchor="middle" fill="#cfc5ff" font-size="24" font-weight="800">25U</text>
+          <text x="165" y="214" text-anchor="middle" fill="#b7acd9" font-size="14">여유 공간</text>
+          <text x="165" y="238" text-anchor="middle" fill="#8998b5" font-size="11">추가 노드 · 향후 확장</text>
+          <path d="M165 270v55M155 315l10 10 10-10" fill="none" stroke="#8066ff" stroke-width="2"/>
+          <text x="165" y="347" text-anchor="middle" fill="#8f80c4" font-size="10">확장 여력</text>
+
+          <!-- 5 HCI Nodes -->
+          <rect x="76" y="373" width="178" height="96" rx="4" fill="rgba(128,102,255,.12)" stroke="#8066ff"/>
+          <text x="165" y="389" text-anchor="middle" fill="#e4dcff" font-size="11" font-weight="700">HCI NODE · 5대 × 2U = 10U</text>
+          <g stroke="#8eb1d1" stroke-width="1" fill="url(#nodeB)">
+            <rect x="88" y="396" width="154" height="12" rx="2"/><rect x="88" y="412" width="154" height="12" rx="2"/>
+            <rect x="88" y="428" width="154" height="12" rx="2"/><rect x="88" y="444" width="154" height="12" rx="2"/>
+            <rect x="88" y="460" width="154" height="7" rx="2"/>
+          </g>
+          <g fill="#b7ff00">
+            <circle cx="99" cy="402" r="2"/><circle cx="99" cy="418" r="2"/><circle cx="99" cy="434" r="2"/><circle cx="99" cy="450" r="2"/><circle cx="99" cy="463" r="2"/>
+          </g>
+
+          <!-- UPS -->
+          <rect x="76" y="473" width="178" height="62" rx="4" fill="url(#upsB)" stroke="#9ba1aa"/>
+          <text x="165" y="501" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">UPS</text>
+          <text x="165" y="520" text-anchor="middle" fill="#e1e3e7" font-size="11">6U</text>
+
+          <line x1="35" y1="32" x2="35" y2="535" stroke="#7f93b3" stroke-width="1.5"/>
+          <path d="M30 32h10M30 535h10" stroke="#7f93b3" stroke-width="1.5"/>
+          <text x="21" y="292" transform="rotate(-90 21 292)" text-anchor="middle" fill="#aebbd5" font-size="12" font-weight="700">42U RACK</text>
+        </svg>
+
+        <div class="rack-caption"><b>5개 HCI 노드만 배치</b><br>TOR 1U + HCI Node 10U + UPS 6U = <b>17U</b> / <b>25U 여유</b></div>
       </div>
     </div>
-    <div class="rack-note">요청하신 장비 규격을 기준으로 한 42U 랙 구성 예시입니다. 장비 간 공간은 두지 않고, UPS를 제외한 잔여 공간은 TOR와 서버 사이에 배치했습니다.</div>
-    <div class="rack-legend"><span>파란색 · Server / HCI Node</span><span>보라색 · Storage</span><span>회색 · UPS</span><span>빈 공간 · 1U 간격 / 확장 여유</span></div>
+
+    <div class="rack-explain">
+      <div><strong>Traditional 3-Tier</strong><span>네트워크·서버·스토리지가 각각 별도 영역으로 구성되어 랙 상면을 대부분 사용합니다.</span></div>
+      <div><strong>HCI</strong><span>Compute와 Storage가 노드에 통합되어 5개 노드만으로 구성하고, 동일한 42U 랙 안에 충분한 확장 공간을 남길 수 있습니다.</span></div>
+    </div>
+
+    <div class="rack-note">42U 랙을 기준으로 개념적인 상면 사용량을 비교한 다이어그램입니다. 실제 장비의 U 규격과 전원·네트워크 구성에 따라 배치는 달라질 수 있습니다.</div>
+    <div class="rack-legend"><span>파란색 · Network / Server</span><span>보라색 · Storage / HCI</span><span>회색 · UPS</span><span>점선 영역 · HCI 여유 공간</span></div>
   </div>
-</section>
+
 
 <section class="section">
   <div class="label">CONSIDERATIONS</div>
